@@ -1,0 +1,5 @@
+count, dataset_name, command
+80745, train_512.csv, "cat train_512.csv | grep "\n" | wc -l"
+1785222, train_256.csv, "cat train_256.csv | grep "\n" | wc -l"
+
+

@@ -1,0 +1,5 @@
+Model: "LoC_LIC" 
+N: [32, 64, 128]
+M: [320]
+slice_num: 10
+context_window: 5
