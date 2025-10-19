@@ -118,7 +118,7 @@ def test_single_dataset(images_dir, net, save_dir, dataset_name, quality, model_
 
 def main():
     args = test_options()
-    target_checkpoint = "checkpoint_best_loss.pth.tar"
+    target_checkpoint = "checkpoint_140.pth.tar" # checkpoint_best_loss.pth.tar
     checkpoint_path = os.path.join(args.main_path, args.checkpoint)
     dataset_dir = os.path.join(args.main_path, args.test_dataset)
     repo_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

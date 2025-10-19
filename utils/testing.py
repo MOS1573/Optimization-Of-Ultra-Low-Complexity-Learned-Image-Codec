@@ -2,14 +2,22 @@ import os
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from utils.metrics import compute_metrics, ImageMetric
-from utils.utils import *
+from utils.metrics import ImageMetric
+from utils.utils import AverageMeter
 import random
 
-def test_one_epoch(epoch, test_dataloader, model, vae, criterion, logger_val, tb_logger):
+
+def get_unwrapped_model(model):
+    """Get the underlying model from a wrapped model (e.g., DDP, FSDP)."""
+    if hasattr(model, 'module'):
+        return model.module
+    return model
+
+
+def test_one_epoch(epoch, test_dataloader, model, vae, criterion, logger_val, tb_logger, image_metric, accelerator):
+
+    accelerator.wait_for_everyone()
     model.eval()
-    device = next(model.parameters()).device
-    image_metric = ImageMetric(device)
 
     loss = AverageMeter()
     bpp_loss = AverageMeter()
@@ -22,7 +30,8 @@ def test_one_epoch(epoch, test_dataloader, model, vae, criterion, logger_val, tb
 
     with torch.no_grad():
         for i, image in enumerate(test_dataloader):
-            image = image.to(device).clamp(0, 1)
+            # Image is already on correct device from accelerator-prepared dataloader
+            image = image.clamp(0, 1)
 
             if vae is not None:    
                 d = vae.encode(image)
@@ -37,7 +46,7 @@ def test_one_epoch(epoch, test_dataloader, model, vae, criterion, logger_val, tb
             else:
                 rec = out_net["x_hat"].clamp(0, 1)
 
-            aux_loss.update(model.aux_loss())
+            aux_loss.update(get_unwrapped_model(model).get_aux_loss())
             bpp_loss.update(out_criterion["bpp_loss"])
             loss.update(out_criterion["loss"])
             mse_loss.update(out_criterion["mse_loss"])
@@ -49,30 +58,34 @@ def test_one_epoch(epoch, test_dataloader, model, vae, criterion, logger_val, tb
             ms_ssim.update(metrics['msssim'])
             lpips.update(metrics['lpips'])
 
-    tb_logger.add_scalar('{}'.format('[val]: loss'), loss.avg, epoch + 1)
-    tb_logger.add_scalar('{}'.format('[val]: aux_loss'), aux_loss.avg, epoch + 1)
-    tb_logger.add_scalar('{}'.format('[val]: bpp_loss'), bpp_loss.avg, epoch + 1)
-    tb_logger.add_scalar('{}'.format('[val]: psnr'), psnr.avg, epoch + 1)
-    tb_logger.add_scalar('{}'.format('[val]: ssim'), ssim.avg, epoch + 1)
-    tb_logger.add_scalar('{}'.format('[val]: ms-ssim'), ms_ssim.avg, epoch + 1)
-    tb_logger.add_scalar('{}'.format('[val]: lpips'), lpips.avg, epoch + 1)
-    tb_logger.add_scalar('{}'.format('[val]: mse_loss'), mse_loss.avg, epoch + 1)
+    # Only log on main process
+    if accelerator.is_main_process:
+        if tb_logger is not None:
+            tb_logger.add_scalar('{}'.format('[val]: loss'), loss.avg, epoch + 1)
+            tb_logger.add_scalar('{}'.format('[val]: aux_loss'), aux_loss.avg, epoch + 1)
+            tb_logger.add_scalar('{}'.format('[val]: bpp_loss'), bpp_loss.avg, epoch + 1)
+            tb_logger.add_scalar('{}'.format('[val]: psnr'), psnr.avg, epoch + 1)
+            tb_logger.add_scalar('{}'.format('[val]: ssim'), ssim.avg, epoch + 1)
+            tb_logger.add_scalar('{}'.format('[val]: ms-ssim'), ms_ssim.avg, epoch + 1)
+            tb_logger.add_scalar('{}'.format('[val]: lpips'), lpips.avg, epoch + 1)
+            tb_logger.add_scalar('{}'.format('[val]: mse_loss'), mse_loss.avg, epoch + 1)
 
-    # log the first image of the last batch in tensorboard
-    image_index = random.randint(0, image.size(0) - 1)
-    tb_logger.add_image('{}'.format('[val]: input'), image[image_index], epoch + 1)
-    tb_logger.add_image('{}'.format('[val]: rec'), rec[image_index], epoch + 1)
+            # log the first image of the last batch in tensorboard
+            image_index = random.randint(0, image.size(0) - 1)
+            tb_logger.add_image('{}'.format('[val]: input'), image[image_index], epoch + 1)
+            tb_logger.add_image('{}'.format('[val]: rec'), rec[image_index], epoch + 1)
 
-    logger_val.info(
-        f"Test epoch {epoch}: Average losses: "
-        f"Loss: {loss.avg:.4f} | "
-        f"Bpp loss: {bpp_loss.avg:.4f} | "
-        f"Aux loss: {aux_loss.avg:.2f} | "
-        f"PSNR: {psnr.avg:.6f} | "
-        f"MS-SSIM: {ms_ssim.avg:.6f} | "
-        f"LPIPS: {lpips.avg:.6f}" 
-    )   
+        logger_val.info(
+            f"Test epoch {epoch}: Average losses: "
+            f"Loss: {loss.avg:.4f} | "
+            f"Bpp loss: {bpp_loss.avg:.4f} | "
+            f"Aux loss: {aux_loss.avg:.2f} | "
+            f"PSNR: {psnr.avg:.6f} | "
+            f"MS-SSIM: {ms_ssim.avg:.6f} | "
+            f"LPIPS: {lpips.avg:.6f}" 
+        )   
 
+    accelerator.wait_for_everyone()
     return loss.avg
 
 def compress_one_image(model, x, stream_path, H, W, img_name):

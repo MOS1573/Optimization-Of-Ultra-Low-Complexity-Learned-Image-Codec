@@ -1,5 +1,6 @@
 import os
 import torch
+import torch.nn as nn
 import numpy as np
 import scipy.interpolate
 import PIL.Image as Image
@@ -11,42 +12,42 @@ from torchmetrics.image.fid import FrechetInceptionDistance
 from torchmetrics.image.inception import InceptionScore
 
 
-class ImageMetric():
-    def __init__(self,device):
-        self.psnr = PeakSignalNoiseRatio().to(device)
-        self.ssim = StructuralSimilarityIndexMeasure().to(device)
-        self.msssim = MultiScaleStructuralSimilarityIndexMeasure().to(device)
-        self.lpips = LearnedPerceptualImagePatchSimilarity(net_type='squeeze').to(device)
-        self.fid   = FrechetInceptionDistance(feature=2048).to(device)
-        self.inception_score = InceptionScore().to(device)
-        self.device = device
+class ImageMetric(nn.Module):
+    def __init__(self):
+        super(ImageMetric, self).__init__()
+        self.psnr = PeakSignalNoiseRatio(data_range=1.0)
+        self.ssim = StructuralSimilarityIndexMeasure()
+        self.msssim = MultiScaleStructuralSimilarityIndexMeasure()
+        self.lpips = LearnedPerceptualImagePatchSimilarity(net_type='squeeze')
+        self.fid   = FrechetInceptionDistance(feature=2048)
+        self.inception_score = InceptionScore()
         
     def metric_image(self, output, target, size_of_image=None): 
-        output, target, original_image_size = self.get_image_sizes(output, target)         
-        output, target = output.to(self.device), target.to(self.device)
-        psnr = self.psnr(output, target).item()
-        ssim = self.ssim(output, target).item()
-        msssim = self.msssim(output, target).item()
+        with torch.no_grad():
+            output, target, original_image_size = self.get_image_sizes(output, target)         
+            psnr = self.psnr(output, target).item()
+            ssim = self.ssim(output, target).item()
+            msssim = self.msssim(output, target).item()
 
-        try :
-            lpips = self.lpips(output, target).item()
-        except:
-            lpips = 0
-            print('Could not compute LPIPS')
+            try :
+                lpips = self.lpips(output, target).item()
+            except:
+                lpips = 0
+                print('Could not compute LPIPS')
 
-        if original_image_size is not None and size_of_image is not None:
-            bit_per_pixel = size_of_image * 8 / (original_image_size[0] * original_image_size[1])
-        else:
-            bit_per_pixel = None
-            
-        metrics = { 
-            'psnr': psnr,
-            'ssim': ssim, 
-            'msssim': msssim,
-            'lpips': lpips,
-            'bpp': bit_per_pixel,
-                }
-        return metrics
+            if original_image_size is not None and size_of_image is not None:
+                bit_per_pixel = size_of_image * 8 / (original_image_size[0] * original_image_size[1])
+            else:
+                bit_per_pixel = None
+                
+            metrics = { 
+                'psnr': psnr,
+                'ssim': ssim, 
+                'msssim': msssim,
+                'lpips': lpips,
+                'bpp': bit_per_pixel,
+                    }
+            return metrics
     
     def get_image_sizes(self, output, target):    
         original_image_size = target.shape[-2:]
@@ -74,8 +75,8 @@ class ImageMetric():
         output = torch.cat(output, dim=0)
 
 
-        target = target.mul(255).clamp(0, 255).to(torch.uint8).to(self.device)
-        output = output.mul(255).clamp(0, 255).to(torch.uint8).to(self.device)
+        target = target.mul(255).clamp(0, 255).to(torch.uint8)
+        output = output.mul(255).clamp(0, 255).to(torch.uint8)
 
         self.fid.update(target, real=True)
         self.fid.update(output, real=False)

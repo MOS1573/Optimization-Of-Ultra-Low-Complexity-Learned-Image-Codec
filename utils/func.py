@@ -1,11 +1,51 @@
-# From CompresssAI
-# Modified by Wei Jiang
-
 import torch
 import torch.nn as nn
 import math
 import einops
+from typing import Optional, Tuple
+from torch import Tensor
+from compressai.entropy_models import EntropyBottleneck
 
+
+class EntropyBottleneck_vq(EntropyBottleneck):
+    """Custom EntropyBottleneck to handle VQ indices. taken from CompressAI.
+    """
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def forward(
+        self, x: Tensor, training: Optional[bool] = None
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
+        if training is None:
+            training = self.training
+
+
+        perm = torch.cat(
+            (
+                torch.tensor([1, 0], dtype=torch.long, device=x.device),
+                torch.arange(2, x.ndim, dtype=torch.long, device=x.device),
+            )
+        )
+        inv_perm = perm
+
+
+        x = x.permute(*perm).contiguous()
+        shape = x.size()
+        outputs = x.reshape(x.size(0), 1, -1)
+
+        likelihood, _, _ = self._likelihood(outputs)
+        if self.use_likelihood_bound:
+            likelihood = self.likelihood_lower_bound(likelihood)
+
+        # Convert back to input tensor shape
+        outputs = outputs.reshape(shape)
+        outputs = outputs.permute(*inv_perm).contiguous()
+
+        likelihood = likelihood.reshape(shape)
+        likelihood = likelihood.permute(*inv_perm).contiguous()
+
+        return outputs, likelihood
+    
 def calc_params(model):
     """
     Calculate the number of parameters in a model
@@ -110,6 +150,13 @@ def update_registered_buffers(
             policy,
             dtype,
         )
+
+def remap_old_keys(name, state_dict):
+    """Remap old keys for backwards compatibility."""
+    # This is a placeholder for any key remapping logic that might be needed
+    # for backwards compatibility with older checkpoint formats
+    return state_dict
+
 
 def cal_params(model):
     """

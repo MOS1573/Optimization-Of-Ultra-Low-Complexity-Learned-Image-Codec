@@ -22,12 +22,16 @@ def configure_optimizers(net, args):
     assert len(inter_params) == 0
     assert len(union_params) - len(params_dict.keys()) == 0
 
-    optimizer = optim.Adam(
+    optimizer = optim.AdamW(
         (p for p in parameters if p.requires_grad),
         lr=args.learning_rate,
+        betas=(0.9, 0.999),
+        weight_decay=1e-4,
     )
-    aux_optimizer = optim.Adam(
+    aux_optimizer = optim.AdamW(
         (p for p in aux_parameters if p.requires_grad),
         lr=args.aux_learning_rate,
+        betas=(0.9, 0.999),
+        weight_decay=1e-4,
     )
     return optimizer, aux_optimizer
