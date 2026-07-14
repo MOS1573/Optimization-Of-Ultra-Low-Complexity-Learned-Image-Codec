@@ -1,18 +1,18 @@
 general:
   experiment: "loclic"
-  main_path: "YourMainPath"
-  dataset: "PathToDataset"
+  main_path: "/home/woody/iwnt/iwnt178h/loc-lic-new"
+  dataset: "/home/woody/iwnt/iwnt153h/data/images"
   config: "loclic"
 train:
   dataset_csv: "train_256"
   seed: 192
-  epochs: 100
+  epochs: 200
   learning_rate: 0.0001
   num_workers: 16
   lmbda: 0.01
   lmbda2: 1
-  batch_size: 2
-  test_batch_size: 2
+  batch_size: 40
+  test_batch_size: 40
   aux_learning_rate: 0.001
   patch_size: [256, 256] # [512, 512]
   cuda: True
@@ -22,11 +22,12 @@ train:
   world_size: 1
   dist_url: "env://"
   dist_backend: "nccl"
+  mixed_precision: "no"
   save_every: 1
 test: 
-  test_dataset: "YourTestDataset"
+  test_dataset: "kodak"
   batch_size: 1
-  checkpoint: "YourCheckpoint"
-  output_dir: "YourOutputDir"
+  checkpoint: "/home/woody/iwnt/iwnt178h/loc-lic-new/checkpoints"
+  output_dir: "/home/woody/iwnt/iwnt178h/loc-lic-new/outputs"
   lmbda: 0.01 # To calculate the loss
   lmbda2: 1 # To calculate the loss

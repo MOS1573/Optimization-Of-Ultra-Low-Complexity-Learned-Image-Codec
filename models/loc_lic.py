@@ -139,6 +139,11 @@ class LoC_LIC_residually(CompressionModel):
         x_hat = self.g_s(y_hat).clamp_(0, 1)
         return {"x_hat": x_hat}
 
+    def get_aux_loss(self):
+        return sum(
+            m.loss() for m in self.modules() if isinstance(m, EntropyBottleneck)
+        )
+
 class LoC_LIC_Lite(CompressionModel):
     r"""
     Implementation of the CompressAI package.
@@ -266,6 +271,11 @@ class LoC_LIC_Lite(CompressionModel):
         y_hat = self.gaussian_conditional.decompress(strings[0], indexes, z_hat.dtype)
         x_hat = self.g_s(y_hat).clamp_(0, 1)
         return {"x_hat": x_hat}
+
+    def get_aux_loss(self):
+        return sum(
+            m.loss() for m in self.modules() if isinstance(m, EntropyBottleneck)
+        )
 
 
 class LoC_LIC(CompressionModel):
@@ -455,7 +465,8 @@ class LoC_LIC(CompressionModel):
                 self.local_context[i].update_resolution(H, W, device, mask=self.local_context[0].attn_mask)
 
     def compress(self, x):
-        torch.cuda.synchronize()
+        if torch.cuda.is_available():
+            torch.cuda.synchronize()
         start_time = time.time()
         self.update_resolutions(x.size(2) // 16, x.size(3) // 16)
         y = self.g_a(x)
@@ -537,7 +548,8 @@ class LoC_LIC(CompressionModel):
         encoder.encode_with_indexes(symbols_list, indexes_list, cdf, cdf_lengths, offsets)
         y_string = encoder.flush()
         y_strings.append(y_string)
-        torch.cuda.synchronize()
+        if torch.cuda.is_available():
+            torch.cuda.synchronize()
         end_time = time.time()
 
         cost_time = end_time - start_time
@@ -548,7 +560,8 @@ class LoC_LIC(CompressionModel):
         }
 
     def decompress(self, strings, shape):
-        torch.cuda.synchronize()
+        if torch.cuda.is_available():
+            torch.cuda.synchronize()
         start_time = time.time()
         y_strings = strings[0][0]
         z_strings = strings[1]
@@ -625,7 +638,8 @@ class LoC_LIC(CompressionModel):
 
         y_hat = torch.cat(y_hat_slices, dim=1)
         x_hat = self.g_s(y_hat)
-        torch.cuda.synchronize()
+        if torch.cuda.is_available():
+            torch.cuda.synchronize()
         end_time = time.time()
 
         cost_time = end_time - start_time
@@ -635,14 +649,19 @@ class LoC_LIC(CompressionModel):
             "cost_time": cost_time
         }
 
-    def load_state_dict(self, state_dict):
+    def get_aux_loss(self):
+        return sum(
+            m.loss() for m in self.modules() if isinstance(m, EntropyBottleneck)
+        )
+
+    def load_state_dict(self, state_dict, strict=True):
         update_registered_buffers(
             self.gaussian_conditional,
             "gaussian_conditional",
             ["_quantized_cdf", "_offset", "_cdf_length", "scale_table"],
             state_dict,
         )
-        super().load_state_dict(state_dict)
+        super().load_state_dict(state_dict, strict=strict)
 
     def update(self, scale_table=None, force=False):
         if scale_table is None:

@@ -1,0 +1,25 @@
+Model: "LoC_LIC"
+N: [32, 64, 128]
+M: [320]
+slice_num: 10
+context_window: 5
+
+# 8-bit PTQ Quantization Settings
+quantization:
+  enabled: true
+  method: "ptq"  # Post-Training Quantization
+  precision: "int8"
+  uniform_quantization: true
+  per_channel: true
+  symmetric: true
+  calibration_dataset: "train_256_reduced"  # Smaller dataset for calibration
+  calibration_samples: 100
+  quantize_weights: true
+  quantize_activations: true
+  fuse_bn: true  # Fuse BatchNorm layers
+  observer: "histogram"  # or "minmax"
+  reduce_range: false
+
+# Training settings for quantized model (if fine-tuning)
+train_quantized: false
+quantization_aware_training: false

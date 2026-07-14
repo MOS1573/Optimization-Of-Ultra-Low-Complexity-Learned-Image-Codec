@@ -13,7 +13,7 @@ from torchmetrics.image.inception import InceptionScore
 
 
 class ImageMetric(nn.Module):
-    def __init__(self):
+    def __init__(self, device=None):
         super(ImageMetric, self).__init__()
         self.psnr = PeakSignalNoiseRatio(data_range=1.0)
         self.ssim = StructuralSimilarityIndexMeasure()

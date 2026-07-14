@@ -1,66 +1,103 @@
-# Ignore the following directories and files
-*.log
-*.err
+# ── Model checkpoints (too large for GitHub) ─────────────────────────────────
+checkpoints/
+*.pt
+!Optimization/Windows Desktop App/build/*.spec
+
+# ── Datasets (binary images) ─────────────────────────────────────────────────
+datasets/kodak/
+datasets/lictest/
+
+# ── SLURM job logs ────────────────────────────────────────────────────────────
+*.o[0-9]*
+eval_*.o*
+wrap.o*
+
+# ── Results (generated outputs, too large / ephemeral) ────────────────────────
+/results/
+
+# ── Thesis & personal docs (not part of the codebase) ─────────────────────────
+Writing/
+docs/
+lmsthesis.pdf
+Presentation/
+
+# ── Diagnostic / one-off scripts (not part of the pipeline) ──────────────────
+Optimization/diagnose_psnr.py
+Optimization/run_paper_eval.py
+
+# ── Android app (not included in this release) ───────────────────────────────
+Optimization/Android Mobile App/
+
+# ── SLURM scripts (cluster-specific, not portable) ───────────────────────────
+Optimization/**/*.sh
+
+# ── Internal planning / methodology docs ──────────────────────────────────────
+Optimization/optimization_plan.md
+Optimization/**/METHOD_AND_TECHNIQUE.md
+Optimization/**/STEPS_TO_RUN.md
+Optimization/**/READY_FOR_CONFIG.md
+Optimization/**/phase2_analysis_report.md
+Optimization/Evaluation Harness/RESULTS.md
+Optimization/Windows Desktop App/Open_instructions.md
+Optimization/4-bit/4-bit PTQ/README.md
+Optimization/8-bit/8-bit PTQ/README.md
+
+# ── LaTeX build artifacts ─────────────────────────────────────────────────────
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
 *.out
-*.txt
-tb_logger/
-experiments/
-experiments_old
-results/
-runs/
-.cache/
-# logs/
-# Ignore build directories
-dist/
-build/
+*.run.xml
+*.synctex.gz
+*.toc
+*.lol
+texput.log
 
-# Ignore environment variable files
-.env
+# ── Claude Code session data ─────────────────────────────────────────────────
+.claude/
 
-# Ignore OS generated files
-.DS_Store
-Thumbs.db
-
-# Ignore IDE specific files
-.vscode/
-.idea/
-
-# Ignore compiled files
-*.out
-*.class
-*.o
-
-# Ignore Python cache files
-__pycache__/
-*.pyc
-
-# Ignore temporary files
+# ── Scratch / temp ────────────────────────────────────────────────────────────
+.temp/
 *.tmp
 *.swp
 *.bak
-# Ignore virtual environment directories
-venv/
-env/
 
-# Ignore Jupyter Notebook checkpoints
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.sln
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
 .ipynb_checkpoints/
-
-# Ignore coverage reports
-htmlcov/
+.mypy_cache/
+.pytest_cache/
+.tox/
 .coverage
 .coverage.*
+htmlcov/
 
-# Ignore mypy cache
-.mypy_cache/
-
-# Ignore pytest cache
-.pytest_cache/
-
-# Ignore tox environments
-.tox/
-
-# Ignore pipenv files
+# ── Build / packaging ────────────────────────────────────────────────────────
+dist/
+venv/
+env/
 Pipfile.lock
-
-# Ignore poetry files
 poetry.lock
+
+# ── Training artifacts ────────────────────────────────────────────────────────
+*.log
+*.err
+tb_logger/
+runs/
+experiments/
+experiments_old/
+.cache/

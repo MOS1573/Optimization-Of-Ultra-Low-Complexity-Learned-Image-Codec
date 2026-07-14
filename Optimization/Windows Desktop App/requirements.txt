@@ -1,0 +1,20 @@
+# LoC-LIC Desktop App — Python dependencies
+#
+# Install into your Python environment:
+#   pip install -r requirements.txt
+#
+# For GPU inference (recommended):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+PyQt6>=6.5.0
+torch>=2.0.0
+torchvision>=0.15.0
+compressai>=1.2.0
+Pillow>=10.0.0
+numpy>=1.24.0
+pyinstaller>=6.0.0      # for building the Windows .exe
+
+# ── Phase 2a (ONNX backend) ── install when ready ──────────────────────────
+# onnx>=1.14.0
+# onnxruntime-gpu>=1.16.0    # CUDA EP (NVIDIA)
+# onnxruntime-directml>=1.16.0  # DirectML (AMD / Intel on Windows)

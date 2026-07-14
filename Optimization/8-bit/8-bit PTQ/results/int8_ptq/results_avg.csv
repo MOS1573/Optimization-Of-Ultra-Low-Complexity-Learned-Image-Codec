@@ -1,0 +1,2 @@
+model_name,quality,dataset_name,psnr,ssim,msssim,lpips,fid,inception_score_mean,inception_score_std,bpp,enc_time,dec_time
+LoC_LIC_int8_ptq,0.0018,kodak,26.837839974297417,0.7799806495507559,0.9253375199106004,0.19616484890381494,,,,0.11492318742805058,,

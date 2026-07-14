@@ -1,0 +1,3185 @@
+{
+  "config": {
+    "checkpoint": "/home/woody/iwnt/iwnt178h/loc-lic-new/checkpoints/loc-lic/0.0018.pth.tar",
+    "images_dir": "/home/atuin/b290dc/b290dc10/TestDataset/images/Kodak",
+    "n_images": 8,
+    "patch_size": 512,
+    "bits_tested": 4,
+    "int8_threshold": 75.0,
+    "fp32_psnr": 28.318,
+    "note": "Threshold recomputed from data distribution (0-88 dB range). 0.05 dB was too tight."
+  },
+  "summary": {
+    "n_int8": 204,
+    "n_int4": 246,
+    "n_fp32": 2
+  },
+  "layer_bits": {
+    "g_s.synthesis_transform.7.0": 8,
+    "g_a.analysis_transform.4.conv2": 8,
+    "g_a.analysis_transform.0.conv1": 32,
+    "g_a.analysis_transform.6": 8,
+    "g_a.analysis_transform.0.conv2": 8,
+    "g_a.analysis_transform.1.conv1": 8,
+    "g_a.analysis_transform.1.conv2": 8,
+    "g_a.analysis_transform.2.conv1": 8,
+    "g_a.analysis_transform.3.conv2": 8,
+    "g_a.analysis_transform.4.conv1": 8,
+    "g_a.analysis_transform.2.conv2": 8,
+    "g_a.analysis_transform.3.conv1": 8,
+    "g_a.analysis_transform.5.conv1": 8,
+    "g_a.analysis_transform.5.conv2": 8,
+    "g_a.analysis_transform.0.skip": 8,
+    "h_a.reduction.0": 8,
+    "h_a.reduction.2": 8,
+    "h_a.reduction.6": 8,
+    "h_a.reduction.8": 8,
+    "h_a.reduction.4": 8,
+    "g_a.analysis_transform.4.skip": 8,
+    "h_s.increase.0": 8,
+    "g_a.analysis_transform.2.skip": 8,
+    "h_s.increase.4": 8,
+    "h_s.increase.6.0": 8,
+    "h_s.increase.8": 8,
+    "h_s.increase.2.0": 8,
+    "lrp_anchor.0.lrp_transform.0": 8,
+    "g_s.synthesis_transform.1.upsample.0": 8,
+    "lrp_anchor.1.lrp_transform.0": 8,
+    "lrp_anchor.0.lrp_transform.4": 8,
+    "lrp_nonanchor.1.lrp_transform.0": 8,
+    "lrp_nonanchor.0.lrp_transform.0": 8,
+    "lrp_anchor.0.lrp_transform.2": 8,
+    "g_s.synthesis_transform.6.conv2": 8,
+    "channel_context.1.fushion.0": 8,
+    "channel_context.2.fushion.2": 8,
+    "lrp_nonanchor.0.lrp_transform.2": 8,
+    "channel_context.2.fushion.0": 8,
+    "channel_context.2.fushion.4": 8,
+    "g_s.synthesis_transform.5.upsample.0": 8,
+    "channel_context.3.fushion.2": 8,
+    "lrp_anchor.3.lrp_transform.0": 8,
+    "lrp_nonanchor.0.lrp_transform.4": 8,
+    "channel_context.3.fushion.4": 8,
+    "channel_context.1.fushion.2": 8,
+    "lrp_anchor.1.lrp_transform.4": 8,
+    "lrp_nonanchor.2.lrp_transform.0": 8,
+    "channel_context.4.fushion.0": 8,
+    "lrp_anchor.2.lrp_transform.0": 8,
+    "channel_context.3.fushion.0": 8,
+    "lrp_nonanchor.3.lrp_transform.0": 8,
+    "channel_context.1.fushion.4": 8,
+    "channel_context.4.fushion.2": 8,
+    "lrp_nonanchor.1.lrp_transform.2": 8,
+    "lrp_anchor.1.lrp_transform.2": 8,
+    "lrp_anchor.4.lrp_transform.0": 8,
+    "entropy_parameters_anchor.1.fusion.6": 8,
+    "channel_context.5.fushion.2": 8,
+    "entropy_parameters_anchor.1.fusion.2": 8,
+    "channel_context.5.fushion.0": 8,
+    "entropy_parameters_anchor.0.fusion.2": 8,
+    "lrp_anchor.2.lrp_transform.2": 8,
+    "entropy_parameters_anchor.0.fusion.6": 8,
+    "entropy_parameters_nonanchor.0.fusion.0": 8,
+    "lrp_nonanchor.1.lrp_transform.4": 8,
+    "entropy_parameters_anchor.0.fusion.0": 8,
+    "entropy_parameters_nonanchor.0.fusion.2": 8,
+    "entropy_parameters_nonanchor.0.fusion.6": 8,
+    "channel_context.4.fushion.4": 8,
+    "channel_context.5.fushion.4": 8,
+    "entropy_parameters_anchor.1.fusion.0": 8,
+    "g_s.synthesis_transform.5.conv": 8,
+    "entropy_parameters_anchor.1.fusion.4": 8,
+    "channel_context.6.fushion.0": 8,
+    "entropy_parameters_nonanchor.1.fusion.6": 8,
+    "entropy_parameters_nonanchor.1.fusion.4": 8,
+    "entropy_parameters_nonanchor.2.fusion.2": 8,
+    "entropy_parameters_anchor.2.fusion.2": 8,
+    "channel_context.6.fushion.2": 8,
+    "entropy_parameters_nonanchor.1.fusion.2": 8,
+    "lrp_anchor.5.lrp_transform.0": 8,
+    "local_context.0.fusion": 8,
+    "lrp_nonanchor.2.lrp_transform.2": 8,
+    "local_context.0.qkv_proj": 8,
+    "entropy_parameters_anchor.3.fusion.2": 8,
+    "entropy_parameters_anchor.0.fusion.4": 8,
+    "lrp_nonanchor.3.lrp_transform.2": 8,
+    "entropy_parameters_nonanchor.1.fusion.0": 8,
+    "lrp_nonanchor.4.lrp_transform.0": 8,
+    "entropy_parameters_nonanchor.2.fusion.6": 8,
+    "entropy_parameters_nonanchor.3.fusion.2": 8,
+    "lrp_nonanchor.5.lrp_transform.0": 8,
+    "lrp_anchor.2.lrp_transform.4": 8,
+    "entropy_parameters_anchor.3.fusion.6": 8,
+    "lrp_anchor.3.lrp_transform.2": 8,
+    "entropy_parameters_anchor.2.fusion.4": 8,
+    "entropy_parameters_nonanchor.3.fusion.6": 8,
+    "entropy_parameters_anchor.2.fusion.6": 8,
+    "entropy_parameters_anchor.3.fusion.4": 8,
+    "entropy_parameters_anchor.4.fusion.2": 8,
+    "entropy_parameters_anchor.2.fusion.0": 8,
+    "entropy_parameters_nonanchor.0.fusion.4": 8,
+    "lrp_nonanchor.3.lrp_transform.4": 8,
+    "local_context.0.proj": 8,
+    "lrp_nonanchor.2.lrp_transform.4": 8,
+    "entropy_parameters_nonanchor.2.fusion.0": 8,
+    "lrp_anchor.4.lrp_transform.2": 8,
+    "entropy_parameters_nonanchor.4.fusion.2": 8,
+    "lrp_anchor.3.lrp_transform.4": 8,
+    "entropy_parameters_anchor.3.fusion.0": 8,
+    "channel_context.6.fushion.4": 8,
+    "entropy_parameters_anchor.5.fusion.2": 8,
+    "entropy_parameters_nonanchor.2.fusion.4": 8,
+    "entropy_parameters_nonanchor.3.fusion.4": 8,
+    "local_context.1.fusion": 8,
+    "lrp_nonanchor.4.lrp_transform.2": 8,
+    "entropy_parameters_nonanchor.3.fusion.0": 8,
+    "entropy_parameters_nonanchor.5.fusion.2": 8,
+    "entropy_parameters_anchor.4.fusion.6": 8,
+    "channel_context.7.fushion.2": 8,
+    "lrp_anchor.4.lrp_transform.4": 8,
+    "entropy_parameters_anchor.5.fusion.6": 8,
+    "channel_context.7.fushion.0": 8,
+    "global_inter_context.1.values.0": 8,
+    "channel_context.8.fushion.4": 8,
+    "global_inter_context.4.values.0": 8,
+    "entropy_parameters_anchor.4.fusion.0": 8,
+    "global_inter_context.3.values.0": 8,
+    "channel_context.7.fushion.4": 8,
+    "local_context.1.qkv_proj": 8,
+    "channel_context.8.fushion.2": 8,
+    "global_inter_context.1.reprojection": 8,
+    "lrp_anchor.5.lrp_transform.2": 8,
+    "channel_context.8.fushion.0": 8,
+    "local_context.1.mlp.fc2": 8,
+    "entropy_parameters_anchor.5.fusion.0": 8,
+    "local_context.1.mlp.fc1": 8,
+    "local_context.0.mlp.fc2": 8,
+    "entropy_parameters_nonanchor.4.fusion.0": 8,
+    "global_inter_context.1.values.1": 8,
+    "entropy_parameters_nonanchor.5.fusion.0": 8,
+    "local_context.0.mlp.fc1": 8,
+    "local_context.1.proj": 8,
+    "global_inter_context.2.values.0": 8,
+    "lrp_nonanchor.5.lrp_transform.2": 8,
+    "local_context.3.fusion": 8,
+    "lrp_anchor.7.lrp_transform.0": 8,
+    "global_inter_context.4.reprojection": 8,
+    "entropy_parameters_anchor.5.fusion.4": 8,
+    "lrp_nonanchor.4.lrp_transform.4": 8,
+    "global_inter_context.8.values.1": 8,
+    "local_context.2.qkv_proj": 8,
+    "entropy_parameters_nonanchor.5.fusion.4": 8,
+    "global_inter_context.2.reprojection": 8,
+    "entropy_parameters_nonanchor.4.fusion.6": 8,
+    "entropy_parameters_anchor.4.fusion.4": 8,
+    "entropy_parameters_nonanchor.4.fusion.4": 8,
+    "local_context.2.fusion": 8,
+    "local_context.3.mlp.fc1": 8,
+    "entropy_parameters_nonanchor.5.fusion.6": 8,
+    "global_inter_context.7.values.1": 8,
+    "lrp_anchor.5.lrp_transform.4": 8,
+    "lrp_nonanchor.7.lrp_transform.0": 8,
+    "entropy_parameters_anchor.8.fusion.2": 8,
+    "lrp_anchor.6.lrp_transform.0": 8,
+    "g_s.synthesis_transform.6.conv1": 8,
+    "lrp_anchor.8.lrp_transform.0": 8,
+    "global_inter_context.3.reprojection": 8,
+    "g_s.synthesis_transform.5.subpel_conv.0": 8,
+    "global_inter_context.1.mlp.4": 8,
+    "local_context.3.qkv_proj": 8,
+    "global_intra_context.1.values.0": 8,
+    "lrp_nonanchor.5.lrp_transform.4": 8,
+    "local_context.4.qkv_proj": 8,
+    "entropy_parameters_anchor.8.fusion.6": 8,
+    "global_inter_context.1.keys.0": 8,
+    "entropy_parameters_anchor.6.fusion.6": 8,
+    "entropy_parameters_anchor.6.fusion.2": 8,
+    "global_inter_context.3.values.1": 8,
+    "local_context.4.fusion": 8,
+    "global_inter_context.2.values.1": 8,
+    "global_inter_context.5.values.0": 8,
+    "local_context.2.mlp.fc2": 8,
+    "global_inter_context.2.keys.0": 8,
+    "global_inter_context.5.reprojection": 8,
+    "local_context.2.mlp.fc1": 8,
+    "local_context.3.proj": 8,
+    "local_context.2.proj": 8,
+    "global_inter_context.1.queries.0": 8,
+    "entropy_parameters_anchor.6.fusion.0": 8,
+    "global_inter_context.5.queries.0": 8,
+    "lrp_nonanchor.6.lrp_transform.0": 8,
+    "entropy_parameters_anchor.7.fusion.2": 8,
+    "entropy_parameters_nonanchor.6.fusion.2": 8,
+    "entropy_parameters_anchor.7.fusion.0": 8,
+    "global_inter_context.1.skip": 8,
+    "local_context.3.mlp.fc2": 8,
+    "global_inter_context.4.values.1": 8,
+    "global_inter_context.3.queries.0": 8,
+    "global_inter_context.4.mlp.4": 8,
+    "entropy_parameters_nonanchor.6.fusion.6": 8,
+    "global_inter_context.5.values.1": 8,
+    "global_inter_context.3.mlp.4": 8,
+    "local_context.5.qkv_proj": 8,
+    "global_inter_context.2.queries.0": 4,
+    "entropy_parameters_nonanchor.8.fusion.2": 4,
+    "global_inter_context.1.mlp.0": 4,
+    "global_inter_context.2.mlp.4": 4,
+    "entropy_parameters_nonanchor.7.fusion.0": 4,
+    "local_context.4.proj": 4,
+    "local_context.4.mlp.fc1": 4,
+    "lrp_nonanchor.7.lrp_transform.2": 4,
+    "entropy_parameters_anchor.8.fusion.0": 4,
+    "local_context.5.mlp.fc1": 4,
+    "global_inter_context.1.queries.1": 4,
+    "global_inter_context.7.queries.0": 4,
+    "lrp_anchor.7.lrp_transform.2": 4,
+    "global_inter_context.1.mlp.2": 4,
+    "entropy_parameters_nonanchor.7.fusion.2": 4,
+    "global_intra_context.1.reprojection": 4,
+    "global_inter_context.5.mlp.4": 4,
+    "channel_context.9.fushion.0": 4,
+    "local_context.4.mlp.fc2": 4,
+    "global_inter_context.8.queries.0": 4,
+    "global_intra_context.1.values.1": 4,
+    "lrp_anchor.6.lrp_transform.2": 4,
+    "entropy_parameters_anchor.7.fusion.6": 4,
+    "entropy_parameters_nonanchor.6.fusion.0": 4,
+    "global_inter_context.3.queries.1": 4,
+    "channel_context.9.fushion.2": 4,
+    "global_inter_context.4.queries.0": 4,
+    "entropy_parameters_nonanchor.8.fusion.0": 4,
+    "global_inter_context.5.queries.1": 4,
+    "entropy_parameters_nonanchor.8.fusion.6": 4,
+    "local_context.5.mlp.fc2": 4,
+    "entropy_parameters_anchor.8.fusion.4": 4,
+    "entropy_parameters_nonanchor.6.fusion.4": 4,
+    "lrp_nonanchor.8.lrp_transform.0": 4,
+    "global_intra_context.2.values.0": 4,
+    "global_inter_context.2.skip": 4,
+    "global_inter_context.1.keys.1": 4,
+    "global_inter_context.4.keys.0": 4,
+    "global_inter_context.6.values.0": 4,
+    "local_context.5.fusion": 4,
+    "g_s.synthesis_transform.4.skip": 4,
+    "entropy_parameters_anchor.6.fusion.4": 4,
+    "global_inter_context.2.mlp.2": 4,
+    "global_inter_context.2.mlp.0": 4,
+    "global_inter_context.3.keys.0": 4,
+    "global_inter_context.7.reprojection": 4,
+    "g_s.synthesis_transform.3.upsample.0": 4,
+    "global_inter_context.8.reprojection": 4,
+    "g_s.synthesis_transform.3.conv": 4,
+    "global_inter_context.3.skip": 4,
+    "global_inter_context.3.mlp.2": 4,
+    "lrp_nonanchor.6.lrp_transform.2": 4,
+    "global_inter_context.2.queries.1": 4,
+    "lrp_anchor.7.lrp_transform.4": 4,
+    "entropy_parameters_anchor.7.fusion.4": 4,
+    "channel_context.9.fushion.4": 4,
+    "local_context.5.proj": 4,
+    "global_inter_context.4.skip": 4,
+    "global_inter_context.4.mlp.0": 4,
+    "global_inter_context.4.mlp.2": 4,
+    "entropy_parameters_nonanchor.7.fusion.6": 4,
+    "entropy_parameters_nonanchor.7.fusion.4": 4,
+    "global_inter_context.6.reprojection": 4,
+    "global_inter_context.7.values.0": 4,
+    "global_inter_context.4.queries.1": 4,
+    "g_s.synthesis_transform.2.skip": 4,
+    "global_inter_context.8.queries.1": 4,
+    "lrp_anchor.6.lrp_transform.4": 4,
+    "global_inter_context.7.mlp.4": 4,
+    "lrp_anchor.8.lrp_transform.2": 4,
+    "lrp_nonanchor.7.lrp_transform.4": 4,
+    "g_s.synthesis_transform.3.subpel_conv.0": 4,
+    "global_inter_context.5.keys.0": 4,
+    "global_inter_context.3.mlp.0": 4,
+    "lrp_anchor.9.lrp_transform.0": 4,
+    "global_inter_context.8.values.0": 4,
+    "global_inter_context.5.mlp.2": 4,
+    "entropy_parameters_nonanchor.8.fusion.4": 4,
+    "g_s.synthesis_transform.4.conv1": 4,
+    "global_inter_context.3.keys.1": 4,
+    "lrp_nonanchor.6.lrp_transform.4": 4,
+    "global_intra_context.4.values.0": 4,
+    "local_context.8.qkv_proj": 4,
+    "global_inter_context.5.mlp.0": 4,
+    "global_inter_context.4.keys.1": 4,
+    "lrp_nonanchor.8.lrp_transform.2": 4,
+    "global_inter_context.5.skip": 4,
+    "global_intra_context.1.mlp.4": 4,
+    "entropy_parameters_anchor.9.fusion.6": 4,
+    "global_inter_context.6.queries.0": 4,
+    "g_s.synthesis_transform.0.conv1": 4,
+    "local_context.6.fusion": 4,
+    "global_intra_context.1.mlp.0": 4,
+    "local_context.6.qkv_proj": 4,
+    "g_s.synthesis_transform.1.subpel_conv.0": 4,
+    "g_s.synthesis_transform.4.conv2": 4,
+    "global_inter_context.7.queries.1": 4,
+    "global_inter_context.6.values.1": 4,
+    "local_context.6.mlp.fc2": 4,
+    "lrp_anchor.8.lrp_transform.4": 4,
+    "global_intra_context.1.queries.0": 4,
+    "global_inter_context.5.keys.1": 4,
+    "global_intra_context.1.queries.1": 4,
+    "global_intra_context.1.keys.0": 4,
+    "global_inter_context.8.mlp.4": 4,
+    "local_context.8.mlp.fc2": 4,
+    "g_s.synthesis_transform.1.conv": 4,
+    "global_inter_context.2.keys.1": 4,
+    "local_context.8.fusion": 4,
+    "entropy_parameters_anchor.9.fusion.0": 4,
+    "global_intra_context.2.reprojection": 4,
+    "global_inter_context.7.skip": 4,
+    "entropy_parameters_anchor.9.fusion.2": 4,
+    "local_context.7.qkv_proj": 4,
+    "global_intra_context.2.values.1": 4,
+    "global_inter_context.8.skip": 4,
+    "global_intra_context.3.reprojection": 4,
+    "global_inter_context.9.values.0": 4,
+    "global_intra_context.3.values.0": 4,
+    "local_context.8.mlp.fc1": 4,
+    "global_intra_context.4.reprojection": 4,
+    "g_s.synthesis_transform.0.conv2": 4,
+    "global_inter_context.7.keys.0": 4,
+    "global_inter_context.7.mlp.0": 4,
+    "global_inter_context.6.skip": 4,
+    "global_inter_context.6.mlp.4": 4,
+    "global_intra_context.5.values.0": 4,
+    "local_context.7.mlp.fc2": 4,
+    "local_context.7.mlp.fc1": 4,
+    "global_inter_context.7.mlp.2": 4,
+    "local_context.7.fusion": 4,
+    "global_intra_context.4.values.1": 4,
+    "lrp_nonanchor.8.lrp_transform.4": 4,
+    "local_context.8.proj": 4,
+    "global_inter_context.9.values.1": 4,
+    "global_inter_context.8.mlp.2": 4,
+    "global_inter_context.8.keys.1": 4,
+    "local_context.6.mlp.fc1": 4,
+    "global_inter_context.8.mlp.0": 4,
+    "global_intra_context.1.mlp.2": 4,
+    "global_inter_context.6.queries.1": 4,
+    "local_context.6.proj": 4,
+    "global_inter_context.6.mlp.0": 4,
+    "global_inter_context.6.keys.0": 4,
+    "global_inter_context.7.keys.1": 4,
+    "local_context.7.proj": 4,
+    "entropy_parameters_nonanchor.9.fusion.6": 4,
+    "entropy_parameters_nonanchor.9.fusion.0": 4,
+    "global_intra_context.5.values.1": 4,
+    "global_intra_context.1.keys.1": 4,
+    "entropy_parameters_nonanchor.9.fusion.2": 4,
+    "global_intra_context.3.values.1": 4,
+    "global_inter_context.6.mlp.2": 4,
+    "g_s.synthesis_transform.2.conv1": 4,
+    "global_intra_context.2.mlp.4": 4,
+    "global_inter_context.6.keys.1": 4,
+    "local_context.9.qkv_proj": 4,
+    "global_inter_context.8.keys.0": 4,
+    "lrp_nonanchor.9.lrp_transform.0": 4,
+    "global_inter_context.9.reprojection": 4,
+    "g_s.synthesis_transform.2.conv2": 4,
+    "global_intra_context.3.mlp.4": 4,
+    "lrp_anchor.9.lrp_transform.2": 4,
+    "global_intra_context.5.reprojection": 4,
+    "global_intra_context.5.mlp.2": 4,
+    "global_intra_context.4.mlp.2": 4,
+    "global_intra_context.6.values.0": 4,
+    "global_inter_context.9.queries.0": 4,
+    "global_intra_context.3.mlp.0": 4,
+    "global_intra_context.3.mlp.2": 4,
+    "entropy_parameters_anchor.9.fusion.4": 4,
+    "global_intra_context.2.mlp.0": 4,
+    "lrp_anchor.9.lrp_transform.4": 4,
+    "global_intra_context.4.mlp.4": 4,
+    "local_context.9.fusion": 4,
+    "entropy_parameters_nonanchor.9.fusion.4": 4,
+    "global_inter_context.9.keys.0": 4,
+    "global_inter_context.9.mlp.4": 4,
+    "local_context.9.proj": 4,
+    "global_intra_context.2.mlp.2": 4,
+    "global_intra_context.3.keys.0": 4,
+    "global_intra_context.7.values.0": 4,
+    "global_intra_context.8.values.0": 4,
+    "local_context.9.mlp.fc1": 4,
+    "global_inter_context.9.skip": 4,
+    "global_intra_context.4.keys.0": 4,
+    "global_intra_context.6.reprojection": 4,
+    "global_intra_context.5.keys.0": 4,
+    "global_intra_context.6.values.1": 4,
+    "global_intra_context.7.values.1": 4,
+    "global_intra_context.4.mlp.0": 4,
+    "global_intra_context.8.reprojection": 4,
+    "global_intra_context.7.reprojection": 4,
+    "global_inter_context.9.queries.1": 4,
+    "global_inter_context.9.keys.1": 4,
+    "local_context.9.mlp.fc2": 4,
+    "global_intra_context.8.values.1": 4,
+    "global_inter_context.9.mlp.0": 4,
+    "global_intra_context.4.queries.1": 4,
+    "global_intra_context.2.queries.1": 4,
+    "global_intra_context.7.mlp.2": 4,
+    "global_inter_context.9.mlp.2": 4,
+    "lrp_nonanchor.9.lrp_transform.2": 4,
+    "global_intra_context.5.mlp.4": 4,
+    "global_intra_context.3.queries.0": 4,
+    "global_intra_context.6.mlp.2": 4,
+    "global_intra_context.3.queries.1": 4,
+    "global_intra_context.5.keys.1": 4,
+    "global_intra_context.8.mlp.2": 4,
+    "global_intra_context.2.keys.1": 4,
+    "global_intra_context.2.keys.0": 4,
+    "global_intra_context.4.keys.1": 4,
+    "global_intra_context.8.mlp.4": 4,
+    "global_intra_context.8.mlp.0": 4,
+    "global_intra_context.5.mlp.0": 4,
+    "global_intra_context.4.queries.0": 4,
+    "global_intra_context.9.values.0": 4,
+    "lrp_nonanchor.9.lrp_transform.4": 32,
+    "global_intra_context.5.queries.0": 4,
+    "global_intra_context.6.queries.0": 4,
+    "global_intra_context.6.mlp.4": 4,
+    "global_intra_context.8.queries.1": 4,
+    "global_intra_context.2.queries.0": 4,
+    "global_intra_context.7.mlp.0": 4,
+    "global_intra_context.6.keys.0": 4,
+    "global_intra_context.8.keys.0": 4,
+    "global_intra_context.6.queries.1": 4,
+    "global_intra_context.8.queries.0": 4,
+    "global_intra_context.5.queries.1": 4,
+    "global_intra_context.6.mlp.0": 4,
+    "global_intra_context.7.mlp.4": 4,
+    "global_intra_context.6.keys.1": 4,
+    "global_intra_context.9.reprojection": 4,
+    "global_intra_context.3.keys.1": 4,
+    "global_intra_context.9.values.1": 4,
+    "global_intra_context.9.mlp.2": 4,
+    "global_intra_context.9.keys.0": 4,
+    "global_intra_context.9.mlp.0": 4,
+    "global_intra_context.9.mlp.4": 4,
+    "global_intra_context.9.queries.0": 4,
+    "global_intra_context.9.queries.1": 4,
+    "global_intra_context.7.keys.0": 4,
+    "global_intra_context.9.keys.1": 4,
+    "global_intra_context.8.keys.1": 4,
+    "global_intra_context.7.keys.1": 4,
+    "global_intra_context.7.queries.1": 4,
+    "global_intra_context.7.queries.0": 4
+  },
+  "sensitivity_ranking": [
+    {
+      "name": "g_s.synthesis_transform.7.0",
+      "psnr_q": 27.937,
+      "drop_db": 88.3335,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.4.conv2",
+      "psnr_q": 30.583,
+      "drop_db": 85.6876,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.0.conv1",
+      "psnr_q": 30.9134,
+      "drop_db": 85.3572,
+      "bits": 32
+    },
+    {
+      "name": "g_a.analysis_transform.6",
+      "psnr_q": 31.1814,
+      "drop_db": 85.0891,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.0.conv2",
+      "psnr_q": 31.2706,
+      "drop_db": 85.0,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.1.conv1",
+      "psnr_q": 31.6172,
+      "drop_db": 84.6534,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.1.conv2",
+      "psnr_q": 31.9055,
+      "drop_db": 84.3651,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.2.conv1",
+      "psnr_q": 32.1541,
+      "drop_db": 84.1165,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.3.conv2",
+      "psnr_q": 32.2825,
+      "drop_db": 83.9881,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.4.conv1",
+      "psnr_q": 32.3464,
+      "drop_db": 83.9242,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.2.conv2",
+      "psnr_q": 32.3618,
+      "drop_db": 83.9088,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.3.conv1",
+      "psnr_q": 32.485,
+      "drop_db": 83.7856,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.5.conv1",
+      "psnr_q": 32.56,
+      "drop_db": 83.7105,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.5.conv2",
+      "psnr_q": 33.0842,
+      "drop_db": 83.1863,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.0.skip",
+      "psnr_q": 33.159,
+      "drop_db": 83.1116,
+      "bits": 8
+    },
+    {
+      "name": "h_a.reduction.0",
+      "psnr_q": 33.6587,
+      "drop_db": 82.6119,
+      "bits": 8
+    },
+    {
+      "name": "h_a.reduction.2",
+      "psnr_q": 33.862,
+      "drop_db": 82.4086,
+      "bits": 8
+    },
+    {
+      "name": "h_a.reduction.6",
+      "psnr_q": 33.9405,
+      "drop_db": 82.3301,
+      "bits": 8
+    },
+    {
+      "name": "h_a.reduction.8",
+      "psnr_q": 33.979,
+      "drop_db": 82.2916,
+      "bits": 8
+    },
+    {
+      "name": "h_a.reduction.4",
+      "psnr_q": 33.9974,
+      "drop_db": 82.2731,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.4.skip",
+      "psnr_q": 34.2204,
+      "drop_db": 82.0501,
+      "bits": 8
+    },
+    {
+      "name": "h_s.increase.0",
+      "psnr_q": 34.4558,
+      "drop_db": 81.8147,
+      "bits": 8
+    },
+    {
+      "name": "g_a.analysis_transform.2.skip",
+      "psnr_q": 34.4839,
+      "drop_db": 81.7867,
+      "bits": 8
+    },
+    {
+      "name": "h_s.increase.4",
+      "psnr_q": 34.6773,
+      "drop_db": 81.5933,
+      "bits": 8
+    },
+    {
+      "name": "h_s.increase.6.0",
+      "psnr_q": 34.693,
+      "drop_db": 81.5776,
+      "bits": 8
+    },
+    {
+      "name": "h_s.increase.8",
+      "psnr_q": 34.7469,
+      "drop_db": 81.5236,
+      "bits": 8
+    },
+    {
+      "name": "h_s.increase.2.0",
+      "psnr_q": 34.7503,
+      "drop_db": 81.5203,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.0.lrp_transform.0",
+      "psnr_q": 35.2748,
+      "drop_db": 80.9957,
+      "bits": 8
+    },
+    {
+      "name": "g_s.synthesis_transform.1.upsample.0",
+      "psnr_q": 35.3814,
+      "drop_db": 80.8892,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.1.lrp_transform.0",
+      "psnr_q": 35.6167,
+      "drop_db": 80.6539,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.0.lrp_transform.4",
+      "psnr_q": 35.632,
+      "drop_db": 80.6385,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.1.lrp_transform.0",
+      "psnr_q": 35.6686,
+      "drop_db": 80.6019,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.0.lrp_transform.0",
+      "psnr_q": 35.6903,
+      "drop_db": 80.5803,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.0.lrp_transform.2",
+      "psnr_q": 35.6908,
+      "drop_db": 80.5798,
+      "bits": 8
+    },
+    {
+      "name": "g_s.synthesis_transform.6.conv2",
+      "psnr_q": 35.7294,
+      "drop_db": 80.5412,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.1.fushion.0",
+      "psnr_q": 35.7332,
+      "drop_db": 80.5373,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.2.fushion.2",
+      "psnr_q": 35.8043,
+      "drop_db": 80.4663,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.0.lrp_transform.2",
+      "psnr_q": 35.8142,
+      "drop_db": 80.4564,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.2.fushion.0",
+      "psnr_q": 35.8708,
+      "drop_db": 80.3998,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.2.fushion.4",
+      "psnr_q": 35.9204,
+      "drop_db": 80.3502,
+      "bits": 8
+    },
+    {
+      "name": "g_s.synthesis_transform.5.upsample.0",
+      "psnr_q": 35.9376,
+      "drop_db": 80.333,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.3.fushion.2",
+      "psnr_q": 35.9384,
+      "drop_db": 80.3322,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.3.lrp_transform.0",
+      "psnr_q": 35.9622,
+      "drop_db": 80.3084,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.0.lrp_transform.4",
+      "psnr_q": 35.9686,
+      "drop_db": 80.302,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.3.fushion.4",
+      "psnr_q": 35.9847,
+      "drop_db": 80.2858,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.1.fushion.2",
+      "psnr_q": 35.9897,
+      "drop_db": 80.2808,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.1.lrp_transform.4",
+      "psnr_q": 36.0178,
+      "drop_db": 80.2527,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.2.lrp_transform.0",
+      "psnr_q": 36.0573,
+      "drop_db": 80.2133,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.4.fushion.0",
+      "psnr_q": 36.1071,
+      "drop_db": 80.1635,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.2.lrp_transform.0",
+      "psnr_q": 36.1317,
+      "drop_db": 80.1388,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.3.fushion.0",
+      "psnr_q": 36.1365,
+      "drop_db": 80.134,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.3.lrp_transform.0",
+      "psnr_q": 36.1597,
+      "drop_db": 80.1109,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.1.fushion.4",
+      "psnr_q": 36.1895,
+      "drop_db": 80.0811,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.4.fushion.2",
+      "psnr_q": 36.192,
+      "drop_db": 80.0785,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.1.lrp_transform.2",
+      "psnr_q": 36.2708,
+      "drop_db": 79.9997,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.1.lrp_transform.2",
+      "psnr_q": 36.3671,
+      "drop_db": 79.9034,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.4.lrp_transform.0",
+      "psnr_q": 36.3853,
+      "drop_db": 79.8852,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.1.fusion.6",
+      "psnr_q": 36.4348,
+      "drop_db": 79.8358,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.5.fushion.2",
+      "psnr_q": 36.4641,
+      "drop_db": 79.8064,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.1.fusion.2",
+      "psnr_q": 36.468,
+      "drop_db": 79.8026,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.5.fushion.0",
+      "psnr_q": 36.533,
+      "drop_db": 79.7376,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.0.fusion.2",
+      "psnr_q": 36.561,
+      "drop_db": 79.7096,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.2.lrp_transform.2",
+      "psnr_q": 36.5616,
+      "drop_db": 79.7089,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.0.fusion.6",
+      "psnr_q": 36.589,
+      "drop_db": 79.6816,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.0.fusion.0",
+      "psnr_q": 36.6133,
+      "drop_db": 79.6573,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.1.lrp_transform.4",
+      "psnr_q": 36.6235,
+      "drop_db": 79.6471,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.0.fusion.0",
+      "psnr_q": 36.6743,
+      "drop_db": 79.5963,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.0.fusion.2",
+      "psnr_q": 36.7008,
+      "drop_db": 79.5698,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.0.fusion.6",
+      "psnr_q": 36.7128,
+      "drop_db": 79.5578,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.4.fushion.4",
+      "psnr_q": 36.7428,
+      "drop_db": 79.5278,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.5.fushion.4",
+      "psnr_q": 36.7818,
+      "drop_db": 79.4887,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.1.fusion.0",
+      "psnr_q": 36.8069,
+      "drop_db": 79.4636,
+      "bits": 8
+    },
+    {
+      "name": "g_s.synthesis_transform.5.conv",
+      "psnr_q": 36.8199,
+      "drop_db": 79.4507,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.1.fusion.4",
+      "psnr_q": 36.8262,
+      "drop_db": 79.4444,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.6.fushion.0",
+      "psnr_q": 36.8586,
+      "drop_db": 79.4119,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.1.fusion.6",
+      "psnr_q": 36.8761,
+      "drop_db": 79.3944,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.1.fusion.4",
+      "psnr_q": 36.9398,
+      "drop_db": 79.3308,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.2.fusion.2",
+      "psnr_q": 36.9484,
+      "drop_db": 79.3222,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.2.fusion.2",
+      "psnr_q": 36.9548,
+      "drop_db": 79.3158,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.6.fushion.2",
+      "psnr_q": 37.0262,
+      "drop_db": 79.2444,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.1.fusion.2",
+      "psnr_q": 37.0484,
+      "drop_db": 79.2222,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.5.lrp_transform.0",
+      "psnr_q": 37.053,
+      "drop_db": 79.2175,
+      "bits": 8
+    },
+    {
+      "name": "local_context.0.fusion",
+      "psnr_q": 37.0599,
+      "drop_db": 79.2107,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.2.lrp_transform.2",
+      "psnr_q": 37.0748,
+      "drop_db": 79.1957,
+      "bits": 8
+    },
+    {
+      "name": "local_context.0.qkv_proj",
+      "psnr_q": 37.0976,
+      "drop_db": 79.1729,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.3.fusion.2",
+      "psnr_q": 37.1065,
+      "drop_db": 79.164,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.0.fusion.4",
+      "psnr_q": 37.1139,
+      "drop_db": 79.1567,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.3.lrp_transform.2",
+      "psnr_q": 37.1221,
+      "drop_db": 79.1485,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.1.fusion.0",
+      "psnr_q": 37.1223,
+      "drop_db": 79.1483,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.4.lrp_transform.0",
+      "psnr_q": 37.1979,
+      "drop_db": 79.0727,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.2.fusion.6",
+      "psnr_q": 37.2911,
+      "drop_db": 78.9794,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.3.fusion.2",
+      "psnr_q": 37.2923,
+      "drop_db": 78.9782,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.5.lrp_transform.0",
+      "psnr_q": 37.304,
+      "drop_db": 78.9666,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.2.lrp_transform.4",
+      "psnr_q": 37.3047,
+      "drop_db": 78.9659,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.3.fusion.6",
+      "psnr_q": 37.3118,
+      "drop_db": 78.9587,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.3.lrp_transform.2",
+      "psnr_q": 37.3548,
+      "drop_db": 78.9158,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.2.fusion.4",
+      "psnr_q": 37.3683,
+      "drop_db": 78.9023,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.3.fusion.6",
+      "psnr_q": 37.3713,
+      "drop_db": 78.8993,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.2.fusion.6",
+      "psnr_q": 37.3871,
+      "drop_db": 78.8835,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.3.fusion.4",
+      "psnr_q": 37.4248,
+      "drop_db": 78.8457,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.4.fusion.2",
+      "psnr_q": 37.4704,
+      "drop_db": 78.8002,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.2.fusion.0",
+      "psnr_q": 37.4946,
+      "drop_db": 78.776,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.0.fusion.4",
+      "psnr_q": 37.5075,
+      "drop_db": 78.763,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.3.lrp_transform.4",
+      "psnr_q": 37.5095,
+      "drop_db": 78.761,
+      "bits": 8
+    },
+    {
+      "name": "local_context.0.proj",
+      "psnr_q": 37.5346,
+      "drop_db": 78.736,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.2.lrp_transform.4",
+      "psnr_q": 37.5599,
+      "drop_db": 78.7106,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.2.fusion.0",
+      "psnr_q": 37.6038,
+      "drop_db": 78.6668,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.4.lrp_transform.2",
+      "psnr_q": 37.608,
+      "drop_db": 78.6626,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.4.fusion.2",
+      "psnr_q": 37.6512,
+      "drop_db": 78.6194,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.3.lrp_transform.4",
+      "psnr_q": 37.6902,
+      "drop_db": 78.5804,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.3.fusion.0",
+      "psnr_q": 37.7317,
+      "drop_db": 78.5388,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.6.fushion.4",
+      "psnr_q": 37.7426,
+      "drop_db": 78.5279,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.5.fusion.2",
+      "psnr_q": 37.7862,
+      "drop_db": 78.4844,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.2.fusion.4",
+      "psnr_q": 37.7868,
+      "drop_db": 78.4838,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.3.fusion.4",
+      "psnr_q": 37.8723,
+      "drop_db": 78.3983,
+      "bits": 8
+    },
+    {
+      "name": "local_context.1.fusion",
+      "psnr_q": 37.8729,
+      "drop_db": 78.3977,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.4.lrp_transform.2",
+      "psnr_q": 37.9115,
+      "drop_db": 78.3591,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.3.fusion.0",
+      "psnr_q": 37.9334,
+      "drop_db": 78.3372,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.5.fusion.2",
+      "psnr_q": 38.1267,
+      "drop_db": 78.1439,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.4.fusion.6",
+      "psnr_q": 38.3264,
+      "drop_db": 77.9442,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.7.fushion.2",
+      "psnr_q": 38.3705,
+      "drop_db": 77.9001,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.4.lrp_transform.4",
+      "psnr_q": 38.377,
+      "drop_db": 77.8936,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.5.fusion.6",
+      "psnr_q": 38.3853,
+      "drop_db": 77.8852,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.7.fushion.0",
+      "psnr_q": 38.4114,
+      "drop_db": 77.8592,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.1.values.0",
+      "psnr_q": 38.4135,
+      "drop_db": 77.8571,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.8.fushion.4",
+      "psnr_q": 38.4195,
+      "drop_db": 77.8511,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.4.values.0",
+      "psnr_q": 38.5073,
+      "drop_db": 77.7633,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.4.fusion.0",
+      "psnr_q": 38.5221,
+      "drop_db": 77.7485,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.3.values.0",
+      "psnr_q": 38.5334,
+      "drop_db": 77.7372,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.7.fushion.4",
+      "psnr_q": 38.5367,
+      "drop_db": 77.7339,
+      "bits": 8
+    },
+    {
+      "name": "local_context.1.qkv_proj",
+      "psnr_q": 38.5778,
+      "drop_db": 77.6927,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.8.fushion.2",
+      "psnr_q": 38.6136,
+      "drop_db": 77.657,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.1.reprojection",
+      "psnr_q": 38.6182,
+      "drop_db": 77.6524,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.5.lrp_transform.2",
+      "psnr_q": 38.731,
+      "drop_db": 77.5396,
+      "bits": 8
+    },
+    {
+      "name": "channel_context.8.fushion.0",
+      "psnr_q": 38.7482,
+      "drop_db": 77.5224,
+      "bits": 8
+    },
+    {
+      "name": "local_context.1.mlp.fc2",
+      "psnr_q": 38.7702,
+      "drop_db": 77.5004,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.5.fusion.0",
+      "psnr_q": 38.7977,
+      "drop_db": 77.4728,
+      "bits": 8
+    },
+    {
+      "name": "local_context.1.mlp.fc1",
+      "psnr_q": 38.818,
+      "drop_db": 77.4526,
+      "bits": 8
+    },
+    {
+      "name": "local_context.0.mlp.fc2",
+      "psnr_q": 38.8337,
+      "drop_db": 77.4369,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.4.fusion.0",
+      "psnr_q": 38.8889,
+      "drop_db": 77.3817,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.1.values.1",
+      "psnr_q": 38.9392,
+      "drop_db": 77.3314,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.5.fusion.0",
+      "psnr_q": 38.9525,
+      "drop_db": 77.3181,
+      "bits": 8
+    },
+    {
+      "name": "local_context.0.mlp.fc1",
+      "psnr_q": 38.9639,
+      "drop_db": 77.3067,
+      "bits": 8
+    },
+    {
+      "name": "local_context.1.proj",
+      "psnr_q": 38.9704,
+      "drop_db": 77.3002,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.2.values.0",
+      "psnr_q": 38.9891,
+      "drop_db": 77.2815,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.5.lrp_transform.2",
+      "psnr_q": 39.0893,
+      "drop_db": 77.1813,
+      "bits": 8
+    },
+    {
+      "name": "local_context.3.fusion",
+      "psnr_q": 39.1229,
+      "drop_db": 77.1477,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.7.lrp_transform.0",
+      "psnr_q": 39.1543,
+      "drop_db": 77.1162,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.4.reprojection",
+      "psnr_q": 39.1842,
+      "drop_db": 77.0864,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.5.fusion.4",
+      "psnr_q": 39.203,
+      "drop_db": 77.0676,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.4.lrp_transform.4",
+      "psnr_q": 39.2085,
+      "drop_db": 77.062,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.8.values.1",
+      "psnr_q": 39.3906,
+      "drop_db": 76.88,
+      "bits": 8
+    },
+    {
+      "name": "local_context.2.qkv_proj",
+      "psnr_q": 39.4245,
+      "drop_db": 76.8461,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.5.fusion.4",
+      "psnr_q": 39.4458,
+      "drop_db": 76.8248,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.2.reprojection",
+      "psnr_q": 39.4738,
+      "drop_db": 76.7967,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.4.fusion.6",
+      "psnr_q": 39.5568,
+      "drop_db": 76.7138,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.4.fusion.4",
+      "psnr_q": 39.5706,
+      "drop_db": 76.6999,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.4.fusion.4",
+      "psnr_q": 39.5759,
+      "drop_db": 76.6946,
+      "bits": 8
+    },
+    {
+      "name": "local_context.2.fusion",
+      "psnr_q": 39.6329,
+      "drop_db": 76.6377,
+      "bits": 8
+    },
+    {
+      "name": "local_context.3.mlp.fc1",
+      "psnr_q": 39.6677,
+      "drop_db": 76.6029,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.5.fusion.6",
+      "psnr_q": 39.7177,
+      "drop_db": 76.5529,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.7.values.1",
+      "psnr_q": 39.7448,
+      "drop_db": 76.5258,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.5.lrp_transform.4",
+      "psnr_q": 39.7633,
+      "drop_db": 76.5073,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.7.lrp_transform.0",
+      "psnr_q": 39.7663,
+      "drop_db": 76.5042,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.8.fusion.2",
+      "psnr_q": 39.7675,
+      "drop_db": 76.5031,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.6.lrp_transform.0",
+      "psnr_q": 39.8052,
+      "drop_db": 76.4654,
+      "bits": 8
+    },
+    {
+      "name": "g_s.synthesis_transform.6.conv1",
+      "psnr_q": 39.8168,
+      "drop_db": 76.4538,
+      "bits": 8
+    },
+    {
+      "name": "lrp_anchor.8.lrp_transform.0",
+      "psnr_q": 39.8213,
+      "drop_db": 76.4492,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.3.reprojection",
+      "psnr_q": 39.8446,
+      "drop_db": 76.426,
+      "bits": 8
+    },
+    {
+      "name": "g_s.synthesis_transform.5.subpel_conv.0",
+      "psnr_q": 39.8452,
+      "drop_db": 76.4253,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.1.mlp.4",
+      "psnr_q": 39.8633,
+      "drop_db": 76.4073,
+      "bits": 8
+    },
+    {
+      "name": "local_context.3.qkv_proj",
+      "psnr_q": 39.9536,
+      "drop_db": 76.317,
+      "bits": 8
+    },
+    {
+      "name": "global_intra_context.1.values.0",
+      "psnr_q": 40.1475,
+      "drop_db": 76.1231,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.5.lrp_transform.4",
+      "psnr_q": 40.1657,
+      "drop_db": 76.1048,
+      "bits": 8
+    },
+    {
+      "name": "local_context.4.qkv_proj",
+      "psnr_q": 40.2083,
+      "drop_db": 76.0623,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.8.fusion.6",
+      "psnr_q": 40.2247,
+      "drop_db": 76.0459,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.1.keys.0",
+      "psnr_q": 40.249,
+      "drop_db": 76.0216,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.6.fusion.6",
+      "psnr_q": 40.284,
+      "drop_db": 75.9866,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.6.fusion.2",
+      "psnr_q": 40.2848,
+      "drop_db": 75.9858,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.3.values.1",
+      "psnr_q": 40.3704,
+      "drop_db": 75.9002,
+      "bits": 8
+    },
+    {
+      "name": "local_context.4.fusion",
+      "psnr_q": 40.4217,
+      "drop_db": 75.8489,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.2.values.1",
+      "psnr_q": 40.4754,
+      "drop_db": 75.7952,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.5.values.0",
+      "psnr_q": 40.4871,
+      "drop_db": 75.7835,
+      "bits": 8
+    },
+    {
+      "name": "local_context.2.mlp.fc2",
+      "psnr_q": 40.4902,
+      "drop_db": 75.7804,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.2.keys.0",
+      "psnr_q": 40.5032,
+      "drop_db": 75.7674,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.5.reprojection",
+      "psnr_q": 40.6314,
+      "drop_db": 75.6392,
+      "bits": 8
+    },
+    {
+      "name": "local_context.2.mlp.fc1",
+      "psnr_q": 40.6392,
+      "drop_db": 75.6314,
+      "bits": 8
+    },
+    {
+      "name": "local_context.3.proj",
+      "psnr_q": 40.6854,
+      "drop_db": 75.5852,
+      "bits": 8
+    },
+    {
+      "name": "local_context.2.proj",
+      "psnr_q": 40.6991,
+      "drop_db": 75.5715,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.1.queries.0",
+      "psnr_q": 40.7217,
+      "drop_db": 75.5488,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.6.fusion.0",
+      "psnr_q": 40.754,
+      "drop_db": 75.5165,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.5.queries.0",
+      "psnr_q": 40.7716,
+      "drop_db": 75.4989,
+      "bits": 8
+    },
+    {
+      "name": "lrp_nonanchor.6.lrp_transform.0",
+      "psnr_q": 40.7745,
+      "drop_db": 75.496,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.7.fusion.2",
+      "psnr_q": 40.8395,
+      "drop_db": 75.4311,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.6.fusion.2",
+      "psnr_q": 40.8748,
+      "drop_db": 75.3958,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_anchor.7.fusion.0",
+      "psnr_q": 40.883,
+      "drop_db": 75.3876,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.1.skip",
+      "psnr_q": 40.9401,
+      "drop_db": 75.3305,
+      "bits": 8
+    },
+    {
+      "name": "local_context.3.mlp.fc2",
+      "psnr_q": 40.9406,
+      "drop_db": 75.33,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.4.values.1",
+      "psnr_q": 40.9506,
+      "drop_db": 75.3199,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.3.queries.0",
+      "psnr_q": 40.9738,
+      "drop_db": 75.2967,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.4.mlp.4",
+      "psnr_q": 41.0627,
+      "drop_db": 75.2078,
+      "bits": 8
+    },
+    {
+      "name": "entropy_parameters_nonanchor.6.fusion.6",
+      "psnr_q": 41.1223,
+      "drop_db": 75.1483,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.5.values.1",
+      "psnr_q": 41.1551,
+      "drop_db": 75.1155,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.3.mlp.4",
+      "psnr_q": 41.1578,
+      "drop_db": 75.1128,
+      "bits": 8
+    },
+    {
+      "name": "local_context.5.qkv_proj",
+      "psnr_q": 41.1926,
+      "drop_db": 75.078,
+      "bits": 8
+    },
+    {
+      "name": "global_inter_context.2.queries.0",
+      "psnr_q": 41.3394,
+      "drop_db": 74.9311,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.8.fusion.2",
+      "psnr_q": 41.3606,
+      "drop_db": 74.9099,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.1.mlp.0",
+      "psnr_q": 41.3644,
+      "drop_db": 74.9061,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.2.mlp.4",
+      "psnr_q": 41.3803,
+      "drop_db": 74.8903,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.7.fusion.0",
+      "psnr_q": 41.4053,
+      "drop_db": 74.8652,
+      "bits": 4
+    },
+    {
+      "name": "local_context.4.proj",
+      "psnr_q": 41.425,
+      "drop_db": 74.8456,
+      "bits": 4
+    },
+    {
+      "name": "local_context.4.mlp.fc1",
+      "psnr_q": 41.427,
+      "drop_db": 74.8435,
+      "bits": 4
+    },
+    {
+      "name": "lrp_nonanchor.7.lrp_transform.2",
+      "psnr_q": 41.4307,
+      "drop_db": 74.8398,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_anchor.8.fusion.0",
+      "psnr_q": 41.4894,
+      "drop_db": 74.7811,
+      "bits": 4
+    },
+    {
+      "name": "local_context.5.mlp.fc1",
+      "psnr_q": 41.4997,
+      "drop_db": 74.7709,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.1.queries.1",
+      "psnr_q": 41.5062,
+      "drop_db": 74.7643,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.7.queries.0",
+      "psnr_q": 41.5176,
+      "drop_db": 74.753,
+      "bits": 4
+    },
+    {
+      "name": "lrp_anchor.7.lrp_transform.2",
+      "psnr_q": 41.5623,
+      "drop_db": 74.7083,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.1.mlp.2",
+      "psnr_q": 41.5684,
+      "drop_db": 74.7022,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.7.fusion.2",
+      "psnr_q": 41.5996,
+      "drop_db": 74.671,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.1.reprojection",
+      "psnr_q": 41.6216,
+      "drop_db": 74.649,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.5.mlp.4",
+      "psnr_q": 41.6241,
+      "drop_db": 74.6464,
+      "bits": 4
+    },
+    {
+      "name": "channel_context.9.fushion.0",
+      "psnr_q": 41.6586,
+      "drop_db": 74.6119,
+      "bits": 4
+    },
+    {
+      "name": "local_context.4.mlp.fc2",
+      "psnr_q": 41.6804,
+      "drop_db": 74.5901,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.8.queries.0",
+      "psnr_q": 41.6969,
+      "drop_db": 74.5737,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.1.values.1",
+      "psnr_q": 41.732,
+      "drop_db": 74.5385,
+      "bits": 4
+    },
+    {
+      "name": "lrp_anchor.6.lrp_transform.2",
+      "psnr_q": 41.7683,
+      "drop_db": 74.5022,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_anchor.7.fusion.6",
+      "psnr_q": 41.7725,
+      "drop_db": 74.4981,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.6.fusion.0",
+      "psnr_q": 41.7807,
+      "drop_db": 74.4898,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.3.queries.1",
+      "psnr_q": 41.8737,
+      "drop_db": 74.3969,
+      "bits": 4
+    },
+    {
+      "name": "channel_context.9.fushion.2",
+      "psnr_q": 41.9125,
+      "drop_db": 74.3581,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.4.queries.0",
+      "psnr_q": 41.928,
+      "drop_db": 74.3425,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.8.fusion.0",
+      "psnr_q": 41.9401,
+      "drop_db": 74.3305,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.5.queries.1",
+      "psnr_q": 41.9565,
+      "drop_db": 74.3141,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.8.fusion.6",
+      "psnr_q": 41.964,
+      "drop_db": 74.3066,
+      "bits": 4
+    },
+    {
+      "name": "local_context.5.mlp.fc2",
+      "psnr_q": 41.9993,
+      "drop_db": 74.2713,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_anchor.8.fusion.4",
+      "psnr_q": 42.031,
+      "drop_db": 74.2395,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.6.fusion.4",
+      "psnr_q": 42.0632,
+      "drop_db": 74.2074,
+      "bits": 4
+    },
+    {
+      "name": "lrp_nonanchor.8.lrp_transform.0",
+      "psnr_q": 42.0647,
+      "drop_db": 74.2059,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.2.values.0",
+      "psnr_q": 42.1116,
+      "drop_db": 74.159,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.2.skip",
+      "psnr_q": 42.115,
+      "drop_db": 74.1555,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.1.keys.1",
+      "psnr_q": 42.1445,
+      "drop_db": 74.126,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.4.keys.0",
+      "psnr_q": 42.1544,
+      "drop_db": 74.1161,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.values.0",
+      "psnr_q": 42.1577,
+      "drop_db": 74.1129,
+      "bits": 4
+    },
+    {
+      "name": "local_context.5.fusion",
+      "psnr_q": 42.163,
+      "drop_db": 74.1075,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.4.skip",
+      "psnr_q": 42.1742,
+      "drop_db": 74.0963,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_anchor.6.fusion.4",
+      "psnr_q": 42.2082,
+      "drop_db": 74.0623,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.2.mlp.2",
+      "psnr_q": 42.2188,
+      "drop_db": 74.0518,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.2.mlp.0",
+      "psnr_q": 42.2465,
+      "drop_db": 74.024,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.3.keys.0",
+      "psnr_q": 42.2528,
+      "drop_db": 74.0177,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.7.reprojection",
+      "psnr_q": 42.2874,
+      "drop_db": 73.9832,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.3.upsample.0",
+      "psnr_q": 42.2938,
+      "drop_db": 73.9768,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.8.reprojection",
+      "psnr_q": 42.3067,
+      "drop_db": 73.9639,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.3.conv",
+      "psnr_q": 42.3577,
+      "drop_db": 73.9128,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.3.skip",
+      "psnr_q": 42.4377,
+      "drop_db": 73.8329,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.3.mlp.2",
+      "psnr_q": 42.4466,
+      "drop_db": 73.8239,
+      "bits": 4
+    },
+    {
+      "name": "lrp_nonanchor.6.lrp_transform.2",
+      "psnr_q": 42.4478,
+      "drop_db": 73.8227,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.2.queries.1",
+      "psnr_q": 42.4611,
+      "drop_db": 73.8094,
+      "bits": 4
+    },
+    {
+      "name": "lrp_anchor.7.lrp_transform.4",
+      "psnr_q": 42.4866,
+      "drop_db": 73.784,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_anchor.7.fusion.4",
+      "psnr_q": 42.5043,
+      "drop_db": 73.7663,
+      "bits": 4
+    },
+    {
+      "name": "channel_context.9.fushion.4",
+      "psnr_q": 42.5993,
+      "drop_db": 73.6713,
+      "bits": 4
+    },
+    {
+      "name": "local_context.5.proj",
+      "psnr_q": 42.7169,
+      "drop_db": 73.5537,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.4.skip",
+      "psnr_q": 42.7281,
+      "drop_db": 73.5425,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.4.mlp.0",
+      "psnr_q": 42.7293,
+      "drop_db": 73.5412,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.4.mlp.2",
+      "psnr_q": 42.8429,
+      "drop_db": 73.4277,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.7.fusion.6",
+      "psnr_q": 42.86,
+      "drop_db": 73.4106,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.7.fusion.4",
+      "psnr_q": 42.8946,
+      "drop_db": 73.376,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.reprojection",
+      "psnr_q": 43.0074,
+      "drop_db": 73.2632,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.7.values.0",
+      "psnr_q": 43.0172,
+      "drop_db": 73.2534,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.4.queries.1",
+      "psnr_q": 43.0968,
+      "drop_db": 73.1738,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.2.skip",
+      "psnr_q": 43.1003,
+      "drop_db": 73.1703,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.8.queries.1",
+      "psnr_q": 43.1155,
+      "drop_db": 73.1551,
+      "bits": 4
+    },
+    {
+      "name": "lrp_anchor.6.lrp_transform.4",
+      "psnr_q": 43.139,
+      "drop_db": 73.1316,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.7.mlp.4",
+      "psnr_q": 43.1605,
+      "drop_db": 73.1101,
+      "bits": 4
+    },
+    {
+      "name": "lrp_anchor.8.lrp_transform.2",
+      "psnr_q": 43.1717,
+      "drop_db": 73.0989,
+      "bits": 4
+    },
+    {
+      "name": "lrp_nonanchor.7.lrp_transform.4",
+      "psnr_q": 43.2,
+      "drop_db": 73.0706,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.3.subpel_conv.0",
+      "psnr_q": 43.2382,
+      "drop_db": 73.0324,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.5.keys.0",
+      "psnr_q": 43.2608,
+      "drop_db": 73.0098,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.3.mlp.0",
+      "psnr_q": 43.2884,
+      "drop_db": 72.9821,
+      "bits": 4
+    },
+    {
+      "name": "lrp_anchor.9.lrp_transform.0",
+      "psnr_q": 43.3511,
+      "drop_db": 72.9195,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.8.values.0",
+      "psnr_q": 43.586,
+      "drop_db": 72.6846,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.5.mlp.2",
+      "psnr_q": 43.6087,
+      "drop_db": 72.6618,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.8.fusion.4",
+      "psnr_q": 43.6521,
+      "drop_db": 72.6185,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.4.conv1",
+      "psnr_q": 43.6653,
+      "drop_db": 72.6053,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.3.keys.1",
+      "psnr_q": 43.7182,
+      "drop_db": 72.5524,
+      "bits": 4
+    },
+    {
+      "name": "lrp_nonanchor.6.lrp_transform.4",
+      "psnr_q": 43.7689,
+      "drop_db": 72.5016,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.4.values.0",
+      "psnr_q": 43.9079,
+      "drop_db": 72.3627,
+      "bits": 4
+    },
+    {
+      "name": "local_context.8.qkv_proj",
+      "psnr_q": 43.9527,
+      "drop_db": 72.3179,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.5.mlp.0",
+      "psnr_q": 44.039,
+      "drop_db": 72.2316,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.4.keys.1",
+      "psnr_q": 44.0859,
+      "drop_db": 72.1847,
+      "bits": 4
+    },
+    {
+      "name": "lrp_nonanchor.8.lrp_transform.2",
+      "psnr_q": 44.1313,
+      "drop_db": 72.1393,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.5.skip",
+      "psnr_q": 44.1664,
+      "drop_db": 72.1041,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.1.mlp.4",
+      "psnr_q": 44.2565,
+      "drop_db": 72.0141,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_anchor.9.fusion.6",
+      "psnr_q": 44.3093,
+      "drop_db": 71.9613,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.queries.0",
+      "psnr_q": 44.3306,
+      "drop_db": 71.9399,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.0.conv1",
+      "psnr_q": 44.3704,
+      "drop_db": 71.9002,
+      "bits": 4
+    },
+    {
+      "name": "local_context.6.fusion",
+      "psnr_q": 44.4528,
+      "drop_db": 71.8178,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.1.mlp.0",
+      "psnr_q": 44.7569,
+      "drop_db": 71.5137,
+      "bits": 4
+    },
+    {
+      "name": "local_context.6.qkv_proj",
+      "psnr_q": 44.8216,
+      "drop_db": 71.449,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.1.subpel_conv.0",
+      "psnr_q": 44.8516,
+      "drop_db": 71.4189,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.4.conv2",
+      "psnr_q": 44.9124,
+      "drop_db": 71.3582,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.7.queries.1",
+      "psnr_q": 44.9455,
+      "drop_db": 71.3251,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.values.1",
+      "psnr_q": 44.9519,
+      "drop_db": 71.3186,
+      "bits": 4
+    },
+    {
+      "name": "local_context.6.mlp.fc2",
+      "psnr_q": 44.9679,
+      "drop_db": 71.3027,
+      "bits": 4
+    },
+    {
+      "name": "lrp_anchor.8.lrp_transform.4",
+      "psnr_q": 45.0268,
+      "drop_db": 71.2437,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.1.queries.0",
+      "psnr_q": 45.0602,
+      "drop_db": 71.2103,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.5.keys.1",
+      "psnr_q": 45.0952,
+      "drop_db": 71.1754,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.1.queries.1",
+      "psnr_q": 45.0971,
+      "drop_db": 71.1735,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.1.keys.0",
+      "psnr_q": 45.1501,
+      "drop_db": 71.1204,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.8.mlp.4",
+      "psnr_q": 45.2496,
+      "drop_db": 71.0209,
+      "bits": 4
+    },
+    {
+      "name": "local_context.8.mlp.fc2",
+      "psnr_q": 45.2822,
+      "drop_db": 70.9884,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.1.conv",
+      "psnr_q": 45.3217,
+      "drop_db": 70.9489,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.2.keys.1",
+      "psnr_q": 45.3655,
+      "drop_db": 70.9051,
+      "bits": 4
+    },
+    {
+      "name": "local_context.8.fusion",
+      "psnr_q": 45.4537,
+      "drop_db": 70.8169,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_anchor.9.fusion.0",
+      "psnr_q": 45.4552,
+      "drop_db": 70.8153,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.2.reprojection",
+      "psnr_q": 45.4796,
+      "drop_db": 70.791,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.7.skip",
+      "psnr_q": 45.4976,
+      "drop_db": 70.773,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_anchor.9.fusion.2",
+      "psnr_q": 45.5403,
+      "drop_db": 70.7302,
+      "bits": 4
+    },
+    {
+      "name": "local_context.7.qkv_proj",
+      "psnr_q": 45.5699,
+      "drop_db": 70.7006,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.2.values.1",
+      "psnr_q": 45.6344,
+      "drop_db": 70.6362,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.8.skip",
+      "psnr_q": 45.7307,
+      "drop_db": 70.5399,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.3.reprojection",
+      "psnr_q": 45.7722,
+      "drop_db": 70.4983,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.values.0",
+      "psnr_q": 45.7852,
+      "drop_db": 70.4854,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.3.values.0",
+      "psnr_q": 45.8479,
+      "drop_db": 70.4227,
+      "bits": 4
+    },
+    {
+      "name": "local_context.8.mlp.fc1",
+      "psnr_q": 45.8797,
+      "drop_db": 70.3909,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.4.reprojection",
+      "psnr_q": 45.8987,
+      "drop_db": 70.3719,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.0.conv2",
+      "psnr_q": 45.9284,
+      "drop_db": 70.3422,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.7.keys.0",
+      "psnr_q": 46.0015,
+      "drop_db": 70.269,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.7.mlp.0",
+      "psnr_q": 46.0715,
+      "drop_db": 70.1991,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.skip",
+      "psnr_q": 46.0986,
+      "drop_db": 70.172,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.mlp.4",
+      "psnr_q": 46.1948,
+      "drop_db": 70.0758,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.5.values.0",
+      "psnr_q": 46.2254,
+      "drop_db": 70.0452,
+      "bits": 4
+    },
+    {
+      "name": "local_context.7.mlp.fc2",
+      "psnr_q": 46.3273,
+      "drop_db": 69.9433,
+      "bits": 4
+    },
+    {
+      "name": "local_context.7.mlp.fc1",
+      "psnr_q": 46.3519,
+      "drop_db": 69.9186,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.7.mlp.2",
+      "psnr_q": 46.3824,
+      "drop_db": 69.8881,
+      "bits": 4
+    },
+    {
+      "name": "local_context.7.fusion",
+      "psnr_q": 46.3861,
+      "drop_db": 69.8844,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.4.values.1",
+      "psnr_q": 46.4386,
+      "drop_db": 69.832,
+      "bits": 4
+    },
+    {
+      "name": "lrp_nonanchor.8.lrp_transform.4",
+      "psnr_q": 46.4672,
+      "drop_db": 69.8034,
+      "bits": 4
+    },
+    {
+      "name": "local_context.8.proj",
+      "psnr_q": 46.6916,
+      "drop_db": 69.579,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.values.1",
+      "psnr_q": 46.7287,
+      "drop_db": 69.5419,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.8.mlp.2",
+      "psnr_q": 46.7609,
+      "drop_db": 69.5097,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.8.keys.1",
+      "psnr_q": 46.7665,
+      "drop_db": 69.504,
+      "bits": 4
+    },
+    {
+      "name": "local_context.6.mlp.fc1",
+      "psnr_q": 46.935,
+      "drop_db": 69.3356,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.8.mlp.0",
+      "psnr_q": 47.0089,
+      "drop_db": 69.2616,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.1.mlp.2",
+      "psnr_q": 47.0288,
+      "drop_db": 69.2418,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.queries.1",
+      "psnr_q": 47.0291,
+      "drop_db": 69.2415,
+      "bits": 4
+    },
+    {
+      "name": "local_context.6.proj",
+      "psnr_q": 47.0718,
+      "drop_db": 69.1988,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.mlp.0",
+      "psnr_q": 47.0817,
+      "drop_db": 69.1888,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.keys.0",
+      "psnr_q": 47.1506,
+      "drop_db": 69.12,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.7.keys.1",
+      "psnr_q": 47.1605,
+      "drop_db": 69.11,
+      "bits": 4
+    },
+    {
+      "name": "local_context.7.proj",
+      "psnr_q": 47.3519,
+      "drop_db": 68.9187,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.9.fusion.6",
+      "psnr_q": 47.5175,
+      "drop_db": 68.753,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.9.fusion.0",
+      "psnr_q": 47.5542,
+      "drop_db": 68.7164,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.5.values.1",
+      "psnr_q": 47.6286,
+      "drop_db": 68.642,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.1.keys.1",
+      "psnr_q": 47.6443,
+      "drop_db": 68.6263,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.9.fusion.2",
+      "psnr_q": 47.8621,
+      "drop_db": 68.4085,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.3.values.1",
+      "psnr_q": 48.0843,
+      "drop_db": 68.1863,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.mlp.2",
+      "psnr_q": 48.2931,
+      "drop_db": 67.9775,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.2.conv1",
+      "psnr_q": 48.4069,
+      "drop_db": 67.8637,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.2.mlp.4",
+      "psnr_q": 48.4962,
+      "drop_db": 67.7744,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.6.keys.1",
+      "psnr_q": 48.5262,
+      "drop_db": 67.7444,
+      "bits": 4
+    },
+    {
+      "name": "local_context.9.qkv_proj",
+      "psnr_q": 48.6458,
+      "drop_db": 67.6248,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.8.keys.0",
+      "psnr_q": 48.7477,
+      "drop_db": 67.5229,
+      "bits": 4
+    },
+    {
+      "name": "lrp_nonanchor.9.lrp_transform.0",
+      "psnr_q": 48.8127,
+      "drop_db": 67.4578,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.reprojection",
+      "psnr_q": 48.9552,
+      "drop_db": 67.3154,
+      "bits": 4
+    },
+    {
+      "name": "g_s.synthesis_transform.2.conv2",
+      "psnr_q": 49.1146,
+      "drop_db": 67.156,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.3.mlp.4",
+      "psnr_q": 49.1411,
+      "drop_db": 67.1294,
+      "bits": 4
+    },
+    {
+      "name": "lrp_anchor.9.lrp_transform.2",
+      "psnr_q": 49.1435,
+      "drop_db": 67.1271,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.5.reprojection",
+      "psnr_q": 49.3028,
+      "drop_db": 66.9678,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.5.mlp.2",
+      "psnr_q": 49.4344,
+      "drop_db": 66.8361,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.4.mlp.2",
+      "psnr_q": 49.7679,
+      "drop_db": 66.5027,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.6.values.0",
+      "psnr_q": 49.7767,
+      "drop_db": 66.4939,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.queries.0",
+      "psnr_q": 49.9381,
+      "drop_db": 66.3324,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.3.mlp.0",
+      "psnr_q": 50.0927,
+      "drop_db": 66.1779,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.3.mlp.2",
+      "psnr_q": 50.3311,
+      "drop_db": 65.9395,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_anchor.9.fusion.4",
+      "psnr_q": 50.394,
+      "drop_db": 65.8766,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.2.mlp.0",
+      "psnr_q": 50.4186,
+      "drop_db": 65.8519,
+      "bits": 4
+    },
+    {
+      "name": "lrp_anchor.9.lrp_transform.4",
+      "psnr_q": 51.0766,
+      "drop_db": 65.194,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.4.mlp.4",
+      "psnr_q": 51.5263,
+      "drop_db": 64.7443,
+      "bits": 4
+    },
+    {
+      "name": "local_context.9.fusion",
+      "psnr_q": 51.58,
+      "drop_db": 64.6906,
+      "bits": 4
+    },
+    {
+      "name": "entropy_parameters_nonanchor.9.fusion.4",
+      "psnr_q": 51.6154,
+      "drop_db": 64.6552,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.keys.0",
+      "psnr_q": 51.9203,
+      "drop_db": 64.3503,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.mlp.4",
+      "psnr_q": 52.1792,
+      "drop_db": 64.0914,
+      "bits": 4
+    },
+    {
+      "name": "local_context.9.proj",
+      "psnr_q": 52.268,
+      "drop_db": 64.0026,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.2.mlp.2",
+      "psnr_q": 52.3512,
+      "drop_db": 63.9193,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.3.keys.0",
+      "psnr_q": 52.5067,
+      "drop_db": 63.7638,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.7.values.0",
+      "psnr_q": 52.5081,
+      "drop_db": 63.7625,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.8.values.0",
+      "psnr_q": 53.0163,
+      "drop_db": 63.2543,
+      "bits": 4
+    },
+    {
+      "name": "local_context.9.mlp.fc1",
+      "psnr_q": 53.0461,
+      "drop_db": 63.2245,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.skip",
+      "psnr_q": 53.0792,
+      "drop_db": 63.1914,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.4.keys.0",
+      "psnr_q": 53.0858,
+      "drop_db": 63.1848,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.6.reprojection",
+      "psnr_q": 53.1907,
+      "drop_db": 63.0799,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.5.keys.0",
+      "psnr_q": 53.1963,
+      "drop_db": 63.0743,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.6.values.1",
+      "psnr_q": 53.2014,
+      "drop_db": 63.0692,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.7.values.1",
+      "psnr_q": 53.3304,
+      "drop_db": 62.9401,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.4.mlp.0",
+      "psnr_q": 53.6292,
+      "drop_db": 62.6414,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.8.reprojection",
+      "psnr_q": 53.952,
+      "drop_db": 62.3186,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.7.reprojection",
+      "psnr_q": 53.9609,
+      "drop_db": 62.3097,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.queries.1",
+      "psnr_q": 53.986,
+      "drop_db": 62.2845,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.keys.1",
+      "psnr_q": 54.004,
+      "drop_db": 62.2665,
+      "bits": 4
+    },
+    {
+      "name": "local_context.9.mlp.fc2",
+      "psnr_q": 54.1876,
+      "drop_db": 62.0829,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.8.values.1",
+      "psnr_q": 54.5667,
+      "drop_db": 61.7039,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.mlp.0",
+      "psnr_q": 54.5702,
+      "drop_db": 61.7003,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.4.queries.1",
+      "psnr_q": 54.6813,
+      "drop_db": 61.5893,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.2.queries.1",
+      "psnr_q": 55.1952,
+      "drop_db": 61.0754,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.7.mlp.2",
+      "psnr_q": 55.3902,
+      "drop_db": 60.8803,
+      "bits": 4
+    },
+    {
+      "name": "global_inter_context.9.mlp.2",
+      "psnr_q": 55.3902,
+      "drop_db": 60.8803,
+      "bits": 4
+    },
+    {
+      "name": "lrp_nonanchor.9.lrp_transform.2",
+      "psnr_q": 55.4761,
+      "drop_db": 60.7945,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.5.mlp.4",
+      "psnr_q": 55.7911,
+      "drop_db": 60.4795,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.3.queries.0",
+      "psnr_q": 55.9749,
+      "drop_db": 60.2957,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.6.mlp.2",
+      "psnr_q": 56.3422,
+      "drop_db": 59.9284,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.3.queries.1",
+      "psnr_q": 56.3765,
+      "drop_db": 59.8941,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.5.keys.1",
+      "psnr_q": 57.4576,
+      "drop_db": 58.813,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.8.mlp.2",
+      "psnr_q": 57.5533,
+      "drop_db": 58.7172,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.2.keys.1",
+      "psnr_q": 57.7037,
+      "drop_db": 58.5669,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.2.keys.0",
+      "psnr_q": 57.7534,
+      "drop_db": 58.5172,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.4.keys.1",
+      "psnr_q": 57.9439,
+      "drop_db": 58.3267,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.8.mlp.4",
+      "psnr_q": 58.484,
+      "drop_db": 57.7866,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.8.mlp.0",
+      "psnr_q": 58.5599,
+      "drop_db": 57.7107,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.5.mlp.0",
+      "psnr_q": 58.6193,
+      "drop_db": 57.6513,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.4.queries.0",
+      "psnr_q": 59.2753,
+      "drop_db": 56.9952,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.9.values.0",
+      "psnr_q": 59.6954,
+      "drop_db": 56.5752,
+      "bits": 4
+    },
+    {
+      "name": "lrp_nonanchor.9.lrp_transform.4",
+      "psnr_q": 59.8393,
+      "drop_db": 56.4313,
+      "bits": 32
+    },
+    {
+      "name": "global_intra_context.5.queries.0",
+      "psnr_q": 59.9649,
+      "drop_db": 56.3057,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.6.queries.0",
+      "psnr_q": 60.1147,
+      "drop_db": 56.1559,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.6.mlp.4",
+      "psnr_q": 60.8367,
+      "drop_db": 55.4339,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.8.queries.1",
+      "psnr_q": 61.2983,
+      "drop_db": 54.9723,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.2.queries.0",
+      "psnr_q": 61.8353,
+      "drop_db": 54.4352,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.7.mlp.0",
+      "psnr_q": 62.5199,
+      "drop_db": 53.7507,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.6.keys.0",
+      "psnr_q": 62.7565,
+      "drop_db": 53.514,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.8.keys.0",
+      "psnr_q": 62.9317,
+      "drop_db": 53.3389,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.6.queries.1",
+      "psnr_q": 62.9707,
+      "drop_db": 53.2998,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.8.queries.0",
+      "psnr_q": 64.8525,
+      "drop_db": 51.418,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.5.queries.1",
+      "psnr_q": 65.6,
+      "drop_db": 50.6706,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.6.mlp.0",
+      "psnr_q": 66.549,
+      "drop_db": 49.7216,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.7.mlp.4",
+      "psnr_q": 66.7328,
+      "drop_db": 49.5377,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.6.keys.1",
+      "psnr_q": 67.679,
+      "drop_db": 48.5916,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.9.reprojection",
+      "psnr_q": 68.2066,
+      "drop_db": 48.064,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.3.keys.1",
+      "psnr_q": 68.7648,
+      "drop_db": 47.5058,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.9.values.1",
+      "psnr_q": 70.8572,
+      "drop_db": 45.4134,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.9.mlp.2",
+      "psnr_q": 71.0911,
+      "drop_db": 45.1795,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.9.keys.0",
+      "psnr_q": 72.1674,
+      "drop_db": 44.1031,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.9.mlp.0",
+      "psnr_q": 77.0269,
+      "drop_db": 39.2437,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.9.mlp.4",
+      "psnr_q": 77.1624,
+      "drop_db": 39.1082,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.9.queries.0",
+      "psnr_q": 77.2181,
+      "drop_db": 39.0525,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.9.queries.1",
+      "psnr_q": 85.2981,
+      "drop_db": 30.9725,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.7.keys.0",
+      "psnr_q": 85.6978,
+      "drop_db": 30.5727,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.9.keys.1",
+      "psnr_q": 88.2512,
+      "drop_db": 28.0194,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.8.keys.1",
+      "psnr_q": 95.2424,
+      "drop_db": 21.0282,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.7.keys.1",
+      "psnr_q": 103.4355,
+      "drop_db": 12.835,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.7.queries.1",
+      "psnr_q": 105.5901,
+      "drop_db": 10.6805,
+      "bits": 4
+    },
+    {
+      "name": "global_intra_context.7.queries.0",
+      "psnr_q": 116.2706,
+      "drop_db": 0.0,
+      "bits": 4
+    }
+  ]
+}
