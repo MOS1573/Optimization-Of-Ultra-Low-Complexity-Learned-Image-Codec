@@ -12,13 +12,13 @@ EXPERIMENT="exp_name"
 NUM_GPUS=8
 MIXED_PRECISION="bf16"
 GRADIENT_ACCUMULATION_STEPS=1
-MAIN_PATH="/home/atuin/b290dc/b290dc10"
+MAIN_PATH="${MAIN_PATH:-path/to/workspace}"
 REPO_DIR=$MAIN_PATH"/repos/loc-lic"
 CONFIG=$REPO_DIR"/configs/models/$EXPERIMENT"
 BATCH_SIZE=40
 EPOCHS=200
 LEARNING_RATE=1e-4
-DATASET="/home/woody/iwnt/iwnt153h/data/images"
+DATASET="${DATASET:-path/to/dataset/images}"
 DATASET_CSV=$REPO_DIR"/datasets/csv/train_256" #train_256_one_epoch
 CLIP_MAX_NORM=10
 

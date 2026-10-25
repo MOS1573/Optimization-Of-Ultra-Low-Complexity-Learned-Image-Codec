@@ -16,7 +16,7 @@ import matplotlib.patches as mpatches
 from PIL import Image
 
 # ── paths ────────────────────────────────────────────────────────────────────
-REPO = "/home/woody/iwnt/iwnt178h/loc-lic-new"
+REPO = os.environ.get("LOCLIC_REPO", os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 PLOTS = os.path.join(REPO, "results", "plots")
 os.makedirs(PLOTS, exist_ok=True)
 

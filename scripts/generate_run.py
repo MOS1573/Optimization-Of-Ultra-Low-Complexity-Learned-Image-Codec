@@ -17,12 +17,12 @@ def generate_bash_script(experiment_name, output_bash_dir, config, lambda_value,
 #SBATCH --gres={gpu_type}
 #SBATCH --time={wall_time}
  
-#  SBATCH --output=//home/woody/iwal/iwal055h/repos/research/image_token_compress/scripts/train_scripts/logs/{experiment_name}.out
-#  SBATCH --error=/home/woody/iwal/iwal055h/repos/research/image_token_compress/scripts/train_scripts/logs/{experiment_name}.err
+#  SBATCH --output=path/to/workspace/scripts/train_scripts/logs/{experiment_name}.out
+#  SBATCH --error=path/to/workspace/scripts/train_scripts/logs/{experiment_name}.err
 
 
 # change to the working directory
-main_hpc_dir="/home/woody/iwnt/iwnt153h"
+main_hpc_dir="${{main_hpc_dir:-path/to/workspace}}"
 repo_dir=$main_hpc_dir"/repos/TokenCompression"
 cd $repo_dir
 

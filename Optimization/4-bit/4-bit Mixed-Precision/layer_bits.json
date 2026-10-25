@@ -1,7 +1,7 @@
 {
   "config": {
-    "checkpoint": "/home/woody/iwnt/iwnt178h/loc-lic-new/checkpoints/loc-lic/0.0018.pth.tar",
-    "images_dir": "/home/atuin/b290dc/b290dc10/TestDataset/images/Kodak",
+    "checkpoint": "path/to/checkpoints/loc-lic/0.0018.pth.tar",
+    "images_dir": "path/to/dataset/Kodak",
     "n_images": 8,
     "patch_size": 512,
     "bits_tested": 4,

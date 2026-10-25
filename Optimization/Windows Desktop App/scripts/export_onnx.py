@@ -225,7 +225,7 @@ def main() -> None:
     p.add_argument("--quant", choices=["none", "int8"], default="none",
                    help="Apply ONNX Runtime INT8 static quantization")
     p.add_argument("--calib",
-                   default="/home/atuin/b290dc/b290dc10/TestDataset/images/Kodak",
+                   default="path/to/dataset/Kodak",
                    help="Calibration dataset (Kodak 24 images) for --quant int8")
     p.add_argument("--benchmark", action="store_true",
                    help="Measure ONNX Runtime latency after export")

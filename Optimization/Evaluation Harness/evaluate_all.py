@@ -34,6 +34,7 @@ import argparse
 import csv
 import json
 import math
+import os
 import sys
 import time
 from dataclasses import asdict, dataclass, field
@@ -70,8 +71,8 @@ _CFG_PATH      = REPO_ROOT / "configs" / "models" / "loclic.yaml"
 _LAYER_BITS    = REPO_ROOT / "Optimization" / "4-bit" / "4-bit Mixed-Precision" / "layer_bits.json"
 
 _DATASET_PATHS = {
-    "kodak":    "/home/atuin/b290dc/b290dc10/TestDataset/images/Kodak",
-    "pro_2020": "/home/atuin/b290dc/b290dc10/TestDataset/images/pro_2020",
+    "kodak":    os.environ.get("LOCLIC_KODAK_DIR", "path/to/dataset/Kodak"),
+    "pro_2020": os.environ.get("LOCLIC_PRO2020_DIR", "path/to/dataset/pro_2020"),
 }
 
 # ── Model registry ────────────────────────────────────────────────────────────

@@ -24,8 +24,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
-REPO  = "/home/woody/iwnt/iwnt178h/loc-lic-new/results"
-PLOTS = "/home/woody/iwnt/iwnt178h/loc-lic-new/results/plots"
+REPO  = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results")
+PLOTS = os.path.join(REPO, "plots")
 os.makedirs(PLOTS, exist_ok=True)
 
 matplotlib.rcParams.update({

@@ -22,7 +22,7 @@ Key differences from training from scratch:
   - The first and last convolutional layers are kept at FP32
 
 Usage:
-  cd /home/woody/iwnt/iwnt178h/loc-lic-new
+  cd path/to/loc-lic-new
   python "Optimization/4-bit QAT/train_qat_4bit.py" \\
       --checkpoint checkpoints/loc-lic/0.0018.pth.tar \\
       --lmbda 0.0018
@@ -197,7 +197,7 @@ def parse_args():
                    help="FP32 checkpoint to start from, e.g. checkpoints/loc-lic/0.0018.pth.tar")
     p.add_argument("--resume_qat", default=None,
                    help="Path to a QAT checkpoint to resume training (optional)")
-    p.add_argument("--dataset", default="/home/woody/iwnt/iwnt153h/data/images",
+    p.add_argument("--dataset", default="path/to/dataset/images",
                    help="Root directory of the training dataset")
     p.add_argument("--dataset_csv", default="train_256",
                    help="CSV filename (without .csv) in datasets/csv/ (default: train_256)")

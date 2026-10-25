@@ -167,7 +167,7 @@ def parse_args():
     p.add_argument("--layer_bits_file",     default=None,
                    help="JSON from sensitivity_analysis.py with per-layer bit assignments. "
                         "If omitted, all layers use --default_bits (uniform quantization).")
-    p.add_argument("--dataset",             default="/home/woody/iwnt/iwnt153h/data/images")
+    p.add_argument("--dataset",             default="path/to/dataset/images")
     p.add_argument("--dataset_csv",         default="train_256")
     p.add_argument("--test_dataset",        default=None)
     p.add_argument("--test_dataset_pro2020",default=None)

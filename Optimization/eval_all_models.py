@@ -169,9 +169,9 @@ def parse_args():
     p = argparse.ArgumentParser(description="Evaluate all LoC-LIC models on both test datasets")
     p.add_argument("--output_dir", default=str(_REPO / "results" / "new_tests"))
     p.add_argument("--test_dataset_kodak",
-                   default="/home/atuin/b290dc/b290dc10/TestDataset/images/Kodak")
+                   default="path/to/dataset/Kodak")
     p.add_argument("--test_dataset_pro2020",
-                   default="/home/atuin/b290dc/b290dc10/TestDataset/images/pro_2020")
+                   default="path/to/dataset/pro_2020")
     p.add_argument("--device", default=None, help="cuda or cpu (auto-detected if omitted)")
     return p.parse_args()
 

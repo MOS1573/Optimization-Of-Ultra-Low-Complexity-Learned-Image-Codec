@@ -1,7 +1,7 @@
 general:
   experiment: "loclic"
-  main_path: "/home/woody/iwnt/iwnt178h/loc-lic-new"
-  dataset: "/home/woody/iwnt/iwnt153h/data/images"
+  main_path: "path/to/loc-lic-new"
+  dataset: "path/to/dataset/images"
   config: "loclic"
 train:
   dataset_csv: "train_256"
@@ -27,7 +27,7 @@ train:
 test: 
   test_dataset: "kodak"
   batch_size: 1
-  checkpoint: "/home/woody/iwnt/iwnt178h/loc-lic-new/checkpoints"
-  output_dir: "/home/woody/iwnt/iwnt178h/loc-lic-new/outputs"
+  checkpoint: "path/to/loc-lic-new/checkpoints"
+  output_dir: "path/to/loc-lic-new/outputs"
   lmbda: 0.01 # To calculate the loss
   lmbda2: 1 # To calculate the loss

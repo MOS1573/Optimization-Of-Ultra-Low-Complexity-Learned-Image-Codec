@@ -11,6 +11,7 @@ Usage (SLURM):
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -34,7 +35,7 @@ from models.get_model import get_model             # noqa: E402
 from utils.config import model_config              # noqa: E402
 from utils.func import update_registered_buffers   # noqa: E402
 
-KODAK_PATH = "/home/atuin/b290dc/b290dc10/TestDataset/images/Kodak"
+KODAK_PATH = os.environ.get("LOCLIC_KODAK_DIR", "path/to/dataset/Kodak")
 CFG_PATH   = REPO_ROOT / "configs" / "models" / "loclic.yaml"
 OUT_JSON   = REPO_ROOT / "results" / "per_image_psnr_kodak.json"
 

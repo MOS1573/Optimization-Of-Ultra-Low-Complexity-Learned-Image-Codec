@@ -148,7 +148,7 @@ def benchmark_model(model: nn.Module, images: list[torch.Tensor],
 
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("--images",   default="/home/atuin/b290dc/b290dc10/TestDataset/images/Kodak")
+    p.add_argument("--images",   default="path/to/dataset/Kodak")
     p.add_argument("--n_images", type=int, default=6, help="number of Kodak images to use")
     p.add_argument("--device",   choices=["cpu", "cuda"], default="cuda")
     p.add_argument("--output_dir", type=Path,

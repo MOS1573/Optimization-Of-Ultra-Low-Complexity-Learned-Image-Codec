@@ -192,7 +192,7 @@ def main() -> None:
     p.add_argument("--output_dir", type=Path,
                    default=REPO_ROOT / "results" / "onnx_benchmark")
     p.add_argument("--calib", default=
-                   "/home/atuin/b290dc/b290dc10/TestDataset/images/Kodak")
+                   "path/to/dataset/Kodak")
     p.add_argument("--n_runs", type=int, default=100)
     p.add_argument("--device", choices=["cpu", "cuda"], default="cuda")
     args = p.parse_args()
