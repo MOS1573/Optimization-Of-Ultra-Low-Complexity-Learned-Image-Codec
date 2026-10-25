@@ -48,7 +48,6 @@ All metrics at lambda = 0.0018 on the Kodak dataset (24 images).
 ├── benchmark/                       # Backbone benchmark scripts
 ├── assets/                          # Figures from original LoC-LIC paper
 │   ├── results/                     # Author's own result figures (this thesis)
-│   └── app_screenshot.png           # Windows app screenshot (add your own)
 │
 ├── Optimization/                    # === Quantization work (this thesis) ===
 │   ├── 8-bit/
@@ -110,7 +109,6 @@ The quantization work follows a progressive pipeline:
 - **Windows Desktop App** (`Windows Desktop App/`) -- PyQt6 GUI for interactive compress/decompress with model selection, side-by-side comparison, and .lic file export
 - Encode latency reduced from 427 ms to 203 ms per image (FP32 → INT8 GPTQ, full `compress()` pipeline incl. entropy coding, measured on an NVIDIA RTX 3080; see `Optimization/generate_plots.py`)
 
-![Windows desktop app](assets/app_screenshot.png)
 
 ### Container Format
 - **LIC format** (`Lic Container Format/`) -- lightweight binary container (.lic) for storing compressed bitstreams with metadata and CRC32 validation
